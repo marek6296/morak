@@ -17,78 +17,78 @@ export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-white">
 
-      {/* ── MOBILE HERO (< lg) ── */}
+      {/* ── MOBILE HERO (< lg) — illustration as background, content anchored to bottom ── */}
       <div className="lg:hidden">
-        {/* Dotácia badge */}
-        <motion.div
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-          className="flex justify-center pt-5 pb-1"
-        >
-          <div
-            className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-[12px] font-semibold text-white shadow-md"
-            style={{ background: "linear-gradient(135deg, #22c55e 0%, #16a34a 100%)" }}
-          >
-            <span className="font-bold">7 500 €</span>
-            <span className="opacity-80">· Štátna dotácia Zelená domácnostiam III</span>
-          </div>
-        </motion.div>
+        <div className="relative h-[82svh] min-h-[540px] bg-white">
 
-        {/* Illustration */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
-          className="relative mx-auto w-full max-w-sm px-4"
-        >
+          {/* Illustration — full bleed, object-contain so nothing crops */}
           <Image
             src="/images/hero-phone.png"
             alt="Rodinný dom so solárnymi panelmi a batériou"
-            width={1070}
-            height={1470}
+            fill
             priority
-            sizes="(max-width: 640px) 100vw, 384px"
-            className="w-full h-auto object-contain drop-shadow-xl"
+            sizes="100vw"
+            className="object-contain object-top"
           />
-        </motion.div>
 
-        {/* Text + CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-          className="px-5 pb-8"
-        >
-          <h1 className="font-display text-[2rem] font-semibold leading-[1.12] tracking-tight text-ink-900 text-balance">
-            Elektrina, ktorú si vyrábate sami.
-          </h1>
-          <p className="mt-3 text-[15px] leading-relaxed text-ink-500">
-            Znížte účet za elektrinu až o&nbsp;80 %. Certifikovaný tím, päťročná záruka.
-          </p>
+          {/* Soft white gradient at bottom for text readability */}
+          <div className="absolute inset-x-0 bottom-0 h-[65%] bg-gradient-to-t from-white via-white/85 to-transparent" />
 
-          <Link
-            href="/kontakt"
-            className="btn-primary mt-4 w-full justify-center py-3.5 text-[15px]"
+          {/* Dotácia badge — floating top-left */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.85, y: -10 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+            className="absolute left-4 top-4"
           >
-            Získať bezplatnú cenovú ponuku
-            <ArrowRightIcon size={16} />
-          </Link>
+            <div
+              className="rounded-2xl px-4 py-3 shadow-[0_8px_32px_rgba(34,197,94,0.35)]"
+              style={{ background: "linear-gradient(135deg, #22c55e 0%, #16a34a 100%)" }}
+            >
+              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-green-100">Štátna dotácia</p>
+              <p className="font-display leading-none text-white" style={{ fontSize: "2rem", fontWeight: 900 }}>
+                7 500 €
+              </p>
+              <p className="mt-0.5 text-[11px] font-semibold text-green-100">Zelená domácnostiam III</p>
+            </div>
+          </motion.div>
 
-          {/* Trust strip */}
-          <div className="mt-3 flex items-center gap-2.5 rounded-xl border border-ink-900/10 bg-ink-50 px-3.5 py-2.5">
-            <span className="inline-flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-brand/15 text-brand-700">
-              <ShieldIcon size={13} />
-            </span>
-            <p className="text-[12px] leading-snug text-ink-600">
-              <span className="font-semibold text-ink-900">5-ročná záruka</span>
-              <span> · oprávnenie §22/§23 · bezplatná konzultácia</span>
-            </p>
+          {/* Text + CTA anchored to bottom */}
+          <div className="absolute inset-x-0 bottom-0 px-5 pb-6">
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
+              className="flex flex-col gap-2.5"
+            >
+              <h1 className="font-display text-[2.15rem] font-semibold leading-[1.12] tracking-tight text-ink-900">
+                Elektrina, ktorú si vyrábate sami.
+              </h1>
+              <p className="text-[15px] leading-relaxed text-ink-600">
+                Znížte účet za elektrinu až o&nbsp;80 %. Certifikovaný tím, päťročná záruka.
+              </p>
+              <Link
+                href="/kontakt"
+                className="btn-primary mt-1 w-full justify-center py-3.5 text-[15px]"
+              >
+                Získať bezplatnú cenovú ponuku
+                <ArrowRightIcon size={16} />
+              </Link>
+              <div className="flex items-center gap-2.5 rounded-xl border border-ink-900/10 bg-white/80 px-3.5 py-2.5 backdrop-blur-sm">
+                <span className="inline-flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-brand/15 text-brand-700">
+                  <ShieldIcon size={13} />
+                </span>
+                <p className="text-[12px] leading-snug text-ink-700">
+                  <span className="font-semibold text-ink-900">5-ročná záruka</span>
+                  <span> · oprávnenie §22/§23 · bezplatná konzultácia</span>
+                </p>
+              </div>
+            </motion.div>
           </div>
-        </motion.div>
+        </div>
 
-        {/* Perks + brand strip */}
-        <div className="border-t border-ink-900/8 bg-ink-50/60 px-5 py-7">
+        {/* Below-fold: perks + brand strip */}
+        <div className="bg-white px-5 py-8">
           <ul className="grid gap-3">
             {PERKS.map((p) => (
               <li key={p} className="flex items-center gap-3 text-[14px] text-ink-700">
