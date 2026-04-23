@@ -13,27 +13,17 @@ const PERKS = [
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden pt-10 md:pt-16">
+    <section className="relative overflow-hidden pt-4 md:pt-8">
       <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-[720px] bg-radial-fade" />
 
       <div className="container-lg relative">
         <div className="grid items-center gap-12 lg:grid-cols-12">
           <div className="lg:col-span-7">
-            <motion.div
-              initial={{ opacity: 0, y: 18 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-              className="inline-flex items-center gap-2 rounded-full border border-ink-900/10 bg-white/60 px-4 py-1.5 text-xs font-medium text-ink-700 shadow-ring backdrop-blur"
-            >
-              <span className="inline-block h-1.5 w-1.5 rounded-full bg-brand animate-pulse" />
-              Dotácia 2026 — Zelená domácnostiam III otvorená
-            </motion.div>
-
             <motion.h1
               initial={{ opacity: 0, y: 26 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.9, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
-              className="mt-6 text-display-2xl h-display text-balance"
+              transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+              className="text-display-2xl h-display text-balance"
             >
               Energia, pohodlie a bezpečie.{" "}
               <span className="relative inline-block">
