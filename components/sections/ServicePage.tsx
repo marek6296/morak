@@ -9,10 +9,11 @@ import { useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import { SERVICES } from "@/lib/nav";
 import type { ServiceData } from "@/lib/services-data";
+import { ICON_MAP } from "@/components/icon-map";
 
 export default function ServicePage({ data }: { data: ServiceData }) {
   const [open, setOpen] = useState<number | null>(0);
-  const Icon = data.icon;
+  const Icon = ICON_MAP[data.icon];
   const others = SERVICES.filter((s) => s.slug !== data.slug);
 
   return (
@@ -51,7 +52,7 @@ export default function ServicePage({ data }: { data: ServiceData }) {
               <Reveal delay={0.2}>
                 <div className="mt-12 grid gap-4 sm:grid-cols-3">
                   {data.highlights.map((h) => {
-                    const I = h.icon;
+                    const I = ICON_MAP[h.icon];
                     return (
                       <div key={h.label} className="rounded-2xl border border-ink-900/10 bg-white p-5 shadow-soft">
                         <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-brand/15 text-brand-700">
@@ -107,7 +108,7 @@ export default function ServicePage({ data }: { data: ServiceData }) {
 
           <div className="mt-14 grid gap-5 md:grid-cols-2">
             {data.features.map((f, i) => {
-              const I = f.icon;
+              const I = ICON_MAP[f.icon];
               return (
                 <Reveal key={f.title} delay={i * 0.06}>
                   <div className="group h-full rounded-3xl border border-ink-900/8 bg-white p-8 shadow-soft transition-all duration-500 hover:-translate-y-1 hover:border-brand-300 hover:shadow-lift">

@@ -1,22 +1,18 @@
-import type { ComponentType, SVGProps } from "react";
-import {
-  SolarIcon,
-  ClimateIcon,
-  CameraIcon,
-  ElectricIcon,
-  CheckIcon,
-  BatteryIcon,
-  ChargerIcon,
-  HouseIcon,
-  ShieldIcon,
-  BadgeIcon,
-  ToolsIcon,
-  ChatIcon,
-  CertifiedIcon,
-  SparkIcon
-} from "@/components/icons";
-
-type IconType = ComponentType<SVGProps<SVGSVGElement> & { size?: number }>;
+export type IconKey =
+  | "solar"
+  | "climate"
+  | "camera"
+  | "electric"
+  | "check"
+  | "battery"
+  | "charger"
+  | "house"
+  | "shield"
+  | "badge"
+  | "tools"
+  | "chat"
+  | "certified"
+  | "spark";
 
 export type ServiceData = {
   slug: string;
@@ -24,9 +20,9 @@ export type ServiceData = {
   eyebrow: string;
   heroLead: string;
   heroImage: string;
-  icon: IconType;
-  highlights: { icon: IconType; label: string; value: string }[];
-  features: { icon: IconType; title: string; text: string }[];
+  icon: IconKey;
+  highlights: { icon: IconKey; label: string; value: string }[];
+  features: { icon: IconKey; title: string; text: string }[];
   includes: string[];
   gallery: string[];
   faq: { q: string; a: string }[];
@@ -41,30 +37,30 @@ export const SERVICE_DATA: Record<string, ServiceData> = {
       "Navrhujeme a montujeme fotovoltické elektrárne, ktoré pokryjú reálnu spotrebu vašej domácnosti alebo firmy. Všetko s dotáciou Zelená domácnostiam III a plnou dokumentáciou.",
     heroImage:
       "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=1600&q=80&auto=format&fit=crop",
-    icon: SolarIcon,
+    icon: "solar",
     highlights: [
-      { icon: SparkIcon, label: "Úspora ročne až", value: "1 800 €" },
-      { icon: BadgeIcon, label: "Dotácia až", value: "7 500 €" },
-      { icon: ShieldIcon, label: "Záruka panelov", value: "25 rokov" }
+      { icon: "spark", label: "Úspora ročne až", value: "1 800 €" },
+      { icon: "badge", label: "Dotácia až", value: "7 500 €" },
+      { icon: "shield", label: "Záruka panelov", value: "25 rokov" }
     ],
     features: [
       {
-        icon: HouseIcon,
+        icon: "house",
         title: "Strechy rodinných domov",
         text: "On-grid aj hybridné zostavy 4 – 12 kWp šité na typ strechy, sklon a orientáciu."
       },
       {
-        icon: BatteryIcon,
+        icon: "battery",
         title: "Batériové úložiská",
         text: "LiFePO4 batérie BYD, Dyness, Huawei s možnosťou postupného rozširovania kapacity."
       },
       {
-        icon: ChargerIcon,
+        icon: "charger",
         title: "Nabíjacie stanice pre EV",
         text: "Jednofázové aj trojfázové wallboxy s integráciou do fotovoltického systému."
       },
       {
-        icon: CertifiedIcon,
+        icon: "certified",
         title: "Dotácie na kľúč",
         text: "Vybavíme registráciu, dokumentáciu, kontrolu SIEA aj záverečné vyúčtovanie."
       }
@@ -106,30 +102,30 @@ export const SERVICE_DATA: Record<string, ServiceData> = {
       "Ticho, efektívne, s certifikovanou montážou. Inštalujeme klimatizácie a tepelné čerpadlá, ktoré chladia v lete, kúria v zime a šetria náklady po celý rok.",
     heroImage:
       "https://images.unsplash.com/photo-1631545308456-1e3cc78eb37d?w=1600&q=80&auto=format&fit=crop",
-    icon: ClimateIcon,
+    icon: "climate",
     highlights: [
-      { icon: SparkIcon, label: "Úroveň hluku od", value: "19 dB" },
-      { icon: BadgeIcon, label: "Energetická trieda", value: "A+++" },
-      { icon: ShieldIcon, label: "Záruka výrobcu", value: "5 rokov" }
+      { icon: "spark", label: "Úroveň hluku od", value: "19 dB" },
+      { icon: "badge", label: "Energetická trieda", value: "A+++" },
+      { icon: "shield", label: "Záruka výrobcu", value: "5 rokov" }
     ],
     features: [
       {
-        icon: HouseIcon,
+        icon: "house",
         title: "Nástenné a multi-split",
         text: "Jedna vonkajšia jednotka pre 2 – 5 vnútorných. Ideálne pre byty a rodinné domy."
       },
       {
-        icon: ToolsIcon,
+        icon: "tools",
         title: "Kanálové klimatizácie",
         text: "Skryté do podhľadu pre kancelárie, reštaurácie a showroomy bez kompromisov v dizajne."
       },
       {
-        icon: BatteryIcon,
+        icon: "battery",
         title: "Tepelné čerpadlá",
         text: "Vzduch-vzduch a vzduch-voda pre celoročné kúrenie a prípravu teplej vody."
       },
       {
-        icon: CertifiedIcon,
+        icon: "certified",
         title: "Servis s F-plynmi",
         text: "Pravidelné prehliadky a záznamy podľa vyhlášky pre zariadenia s chladivami."
       }
@@ -171,30 +167,30 @@ export const SERVICE_DATA: Record<string, ServiceData> = {
       "4K IP kamery, nočné videnie, inteligentná detekcia pohybu a vzdialený prístup z mobilu. Navrhujeme systémy, ktoré skutočne fungujú — nielen svietia ako atrapa.",
     heroImage:
       "https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=1600&q=80&auto=format&fit=crop",
-    icon: CameraIcon,
+    icon: "camera",
     highlights: [
-      { icon: SparkIcon, label: "Rozlíšenie až", value: "4K UHD" },
-      { icon: ShieldIcon, label: "Záznam až", value: "90 dní" },
-      { icon: BadgeIcon, label: "GDPR kompletne", value: "v cene" }
+      { icon: "spark", label: "Rozlíšenie až", value: "4K UHD" },
+      { icon: "shield", label: "Záznam až", value: "90 dní" },
+      { icon: "badge", label: "GDPR kompletne", value: "v cene" }
     ],
     features: [
       {
-        icon: HouseIcon,
+        icon: "house",
         title: "Domácnosti",
         text: "Diskrétne IP kamery s nočným videním, detekcia osoby a vozidla, upozornenia v aplikácii."
       },
       {
-        icon: ToolsIcon,
+        icon: "tools",
         title: "Firmy a prevádzky",
         text: "Riešenia so stovkami kamier, NVR nahrávaním, integráciou s alarmom a prístupovými systémami."
       },
       {
-        icon: ShieldIcon,
+        icon: "shield",
         title: "Alarmy a senzory",
         text: "Bezdrôtové alarmy s pripojením na PCO a senzory detekcie dymu, úniku vody a plynov."
       },
       {
-        icon: CertifiedIcon,
+        icon: "certified",
         title: "GDPR dokumentácia",
         text: "Informačné tabule, záznamový list a DPIA posúdenie pre firemné prevádzky."
       }
@@ -236,30 +232,30 @@ export const SERVICE_DATA: Record<string, ServiceData> = {
       "Od prvého káblového vývodu po odovzdanie s úradnou revíziou. Realizujeme silnoprúdové aj slaboprúdové rozvody pre novostavby, rekonštrukcie a priemyselné objekty.",
     heroImage:
       "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=1600&q=80&auto=format&fit=crop",
-    icon: ElectricIcon,
+    icon: "electric",
     highlights: [
-      { icon: BadgeIcon, label: "Oprávnenie", value: "§22 / §23" },
-      { icon: ShieldIcon, label: "Revízia", value: "v cene" },
-      { icon: SparkIcon, label: "Nasadenie do", value: "7 dní" }
+      { icon: "badge", label: "Oprávnenie", value: "§22 / §23" },
+      { icon: "shield", label: "Revízia", value: "v cene" },
+      { icon: "spark", label: "Nasadenie do", value: "7 dní" }
     ],
     features: [
       {
-        icon: HouseIcon,
+        icon: "house",
         title: "Novostavby a rekonštrukcie",
         text: "Kompletné rozvody na kľúč — od projektu po kolaudačnú revíziu."
       },
       {
-        icon: ToolsIcon,
+        icon: "tools",
         title: "Rozvádzače a bleskozvody",
         text: "Montáž, dimenzovanie a pravidelné revízie podľa normy STN 33 2000."
       },
       {
-        icon: ChargerIcon,
+        icon: "charger",
         title: "Wallboxy a smart home",
         text: "Nabíjacie stanice pre elektromobily a komplexné domové automatizácie."
       },
       {
-        icon: CertifiedIcon,
+        icon: "certified",
         title: "Úradné revízie",
         text: "Odborné prehliadky a skúšky so zápisom do úradnej revíznej správy."
       }
