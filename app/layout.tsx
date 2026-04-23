@@ -3,7 +3,6 @@ import { Space_Grotesk, Inter_Tight } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import PromoBar from "@/components/PromoBar";
 import ChatBot from "@/components/ChatBot";
 
 const display = Space_Grotesk({
@@ -61,7 +60,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="sk" className={`${display.variable} ${sans.variable}`}>
       <body className="font-sans antialiased">
-        <PromoBar />
         <Header />
         <main>{children}</main>
         <Footer />
