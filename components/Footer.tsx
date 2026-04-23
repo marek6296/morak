@@ -10,7 +10,7 @@ export default function Footer() {
       <div className="container-lg relative py-20">
         <div className="grid gap-12 md:grid-cols-12">
           <div className="md:col-span-4">
-            <Image src="/logo.png" alt="MORAK" width={1039} height={163} className="h-8 w-auto brightness-0 invert-0" />
+            <Image src="/logo.png" alt="MORAK" width={1039} height={163} className="h-8 w-auto" />
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-ink-300">
               Certifikovaný realizátor fotovoltických elektrární, klimatizácií, kamerových systémov
               a elektroinštalácií. Pracujeme na celom Slovensku.
