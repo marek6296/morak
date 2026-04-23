@@ -93,9 +93,9 @@ export default function WhyUs() {
             <Reveal delay={0.3}>
               <div className="mt-6 grid grid-cols-3 divide-x divide-white/10 overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-sm">
                 {[
-                  { k: "10+", v: "rokov skúseností" },
-                  { k: "540+", v: "realizácií" },
-                  { k: "98 %", v: "spokojných klientov" }
+                  { k: "103+", v: "dokončených realizácií" },
+                  { k: "5 r.", v: "záruka na montáž" },
+                  { k: "§22/§23", v: "certifikované oprávnenia" }
                 ].map((s) => (
                   <div key={s.v} className="p-6 text-center">
                     <p className="font-display text-3xl font-semibold text-white md:text-4xl">{s.k}</p>

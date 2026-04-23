@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowRightIcon, CheckIcon, StarIcon } from "@/components/icons";
+import { ArrowRightIcon, CheckIcon, ShieldIcon } from "@/components/icons";
 
 const PERKS = [
   "Bezplatná konzultácia a cenový návrh",
@@ -107,7 +107,7 @@ export default function Hero() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-ink-900/60 via-ink-900/10 to-transparent" />
 
-              {/* Floating rating card */}
+              {/* Floating trust card */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -115,19 +115,18 @@ export default function Hero() {
                 className="absolute bottom-6 left-6 right-6 rounded-2xl bg-white/95 p-4 backdrop-blur-md shadow-lift"
               >
                 <div className="flex items-center gap-3">
-                  <div className="flex">
-                    {[0, 1, 2, 3, 4].map((i) => (
-                      <StarIcon key={i} size={16} className="text-brand" />
-                    ))}
+                  <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-brand/15 text-brand-700">
+                    <ShieldIcon size={18} />
+                  </span>
+                  <div>
+                    <p className="text-sm font-semibold text-ink-900">5-ročná záruka na montáž</p>
+                    <p className="text-xs text-ink-400">Písomná zmluva, žiadne skryté položky</p>
                   </div>
-                  <span className="text-sm font-semibold text-ink-900">4,9 / 5,0</span>
-                  <span className="text-xs text-ink-400">• 120+ recenzií</span>
                 </div>
-                <p className="mt-2 text-[13px] leading-relaxed text-ink-600">
-                  „Profesionálny prístup od prvého kontaktu až po odovzdanie. Montáž prebehla za
-                  jeden deň a výsledok je výborný.&ldquo;
+                <p className="mt-3 text-[13px] leading-relaxed text-ink-600">
+                  Certifikované oprávnenia §22 a §23, kompletná dokumentácia, revízia v cene
+                  a záručný aj pozáručný servis po celom Slovensku.
                 </p>
-                <p className="mt-1 text-xs text-ink-400">Peter K., Prešov</p>
               </motion.div>
             </div>
 
@@ -139,9 +138,9 @@ export default function Hero() {
               className="absolute -left-6 top-10 hidden rounded-2xl border border-ink-900/10 bg-white p-4 shadow-lift sm:block"
             >
               <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-ink-400">
-                Realizovaných projektov
+                Dokončených projektov
               </p>
-              <p className="mt-1 font-display text-3xl font-semibold text-ink-900">540+</p>
+              <p className="mt-1 font-display text-3xl font-semibold text-ink-900">103+</p>
             </motion.div>
           </motion.div>
         </div>

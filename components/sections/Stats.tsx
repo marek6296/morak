@@ -4,10 +4,10 @@ import CountUp from "@/components/CountUp";
 import Reveal from "@/components/Reveal";
 
 const STATS = [
-  { to: 540, suffix: "+", label: "realizovaných projektov" },
-  { to: 12, suffix: "", label: "rokov v odbore" },
-  { to: 4.9, suffix: " / 5", decimals: 1, label: "priemerné hodnotenie" },
-  { to: 1250, suffix: " MWh", label: "ročný výkon inštalácií" }
+  { to: 103, suffix: "+", label: "dokončených projektov" },
+  { to: 5, suffix: " r.", label: "záruka na montážne práce" },
+  { to: 24, suffix: " h", label: "priemerná reakčná doba" },
+  { to: 4, suffix: "", label: "technické špecializácie" }
 ];
 
 export default function Stats() {
