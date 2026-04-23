@@ -21,7 +21,7 @@ export default function Hero() {
       <div className="lg:hidden">
         <div className="relative h-[78svh] min-h-[520px]">
           <Image
-            src="https://images.unsplash.com/photo-1655300256335-beef51a914fe?w=1920&q=90&auto=format&fit=crop"
+            src="https://images.pexels.com/photos/159397/solar-panel-array-power-sun-electricity-159397.jpeg?auto=compress&cs=tinysrgb&w=1920"
             alt="Solárne panely na streche rodinného domu"
             fill
             priority
@@ -203,7 +203,7 @@ export default function Hero() {
             >
               <div className="relative h-[520px] overflow-hidden rounded-[28px] bg-ink-800 shadow-lift">
                 <Image
-                  src="https://images.unsplash.com/photo-1655300256335-beef51a914fe?w=1200&q=80&auto=format&fit=crop"
+                  src="https://images.pexels.com/photos/159397/solar-panel-array-power-sun-electricity-159397.jpeg?auto=compress&cs=tinysrgb&w=1200"
                   alt="Montáž solárnych panelov na streche rodinného domu"
                   fill
                   priority
