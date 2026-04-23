@@ -25,9 +25,9 @@ export default function Hero() {
               transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
               className="text-display-2xl h-display text-balance"
             >
-              Energia, pohodlie a bezpečie.{" "}
+              Elektrina, ktorú si vyrábate sami.{" "}
               <span className="relative inline-block">
-                <span className="relative z-10">Pod jednou strechou.</span>
+                <span className="relative z-10">Dotácia až 7 500 €.</span>
                 <span className="absolute bottom-2 left-0 right-0 -z-0 h-3 bg-brand/40" />
               </span>
             </motion.h1>
@@ -38,9 +38,9 @@ export default function Hero() {
               transition={{ duration: 0.9, delay: 0.16, ease: [0.22, 1, 0.36, 1] }}
               className="mt-6 max-w-xl text-lg leading-relaxed text-ink-500 text-balance"
             >
-              Fotovoltické elektrárne, klimatizácie, kamerové systémy a elektroinštalácie.
-              Realizujeme komplexné projekty pre rodiny, firmy i samosprávy s dôrazom na kvalitu,
-              certifikovaný tím a dlhodobý servis.
+              Znížte účet za elektrinu až o 80 % a štátnu dotáciu vybavíme za vás.
+              Fotovoltika, klimatizácie, kamerové systémy a elektroinštalácie —
+              realizácia na kľúč certifikovaným tímom s päťročnou zárukou.
             </motion.p>
 
             <motion.div
