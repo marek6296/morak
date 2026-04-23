@@ -78,7 +78,7 @@ export const SERVICE_DATA: Record<string, ServiceData> = {
       "Záručný aj pozáručný servis"
     ],
     gallery: [
-      "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1200&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1694327671725-e2a81cda3436?w=1200&q=80&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1583345237708-add35a664d77?w=1200&q=80&auto=format&fit=crop",
       "https://images.unsplash.com/flagged/photo-1566838616631-f2618f74a6a2?w=1200&q=80&auto=format&fit=crop"
     ],

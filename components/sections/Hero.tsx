@@ -86,8 +86,8 @@ export default function Hero() {
           >
             <div className="relative h-[300px] sm:h-[460px] lg:h-[520px] overflow-hidden rounded-[28px] bg-ink-800 shadow-lift">
               <Image
-                src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1200&q=80&auto=format&fit=crop"
-                alt="Moderná inštalácia fotovoltickej elektrárne"
+                src="https://images.unsplash.com/photo-1624397640148-949b1732bb0a?w=1200&q=80&auto=format&fit=crop"
+                alt="Montáž solárnych panelov na streche rodinného domu"
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 50vw"
