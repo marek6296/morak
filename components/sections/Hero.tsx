@@ -66,12 +66,12 @@ export default function Hero() {
               className="flex flex-col gap-2.5"
             >
               {/* Headline */}
-              <h1 className="font-display text-[1.95rem] font-semibold leading-[1.12] tracking-tight text-white">
+              <h1 className="font-display text-[2.15rem] font-semibold leading-[1.12] tracking-tight text-white">
                 Elektrina, ktorú si vyrábate sami.
               </h1>
 
               {/* Short subtext */}
-              <p className="text-[14px] leading-relaxed text-ink-200">
+              <p className="text-[16px] leading-relaxed text-ink-200">
                 Znížte účet za elektrinu až o&nbsp;80 %. Certifikovaný tím, päťročná záruka.
               </p>
 
