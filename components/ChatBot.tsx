@@ -135,8 +135,34 @@ export default function ChatBot() {
   const [showReplies, setShowReplies] = useState(true);
   const [unread, setUnread]           = useState(false);
 
+  // visualViewport state for mobile keyboard handling
+  const [vp, setVp] = useState({ h: 0, top: 0, isMobile: false });
+
   const bottomRef = useRef<HTMLDivElement>(null);
   const inputRef  = useRef<HTMLInputElement>(null);
+
+  // Track visualViewport (handles keyboard resize on mobile)
+  useEffect(() => {
+    const update = () => {
+      const isMobile = window.innerWidth < 640;
+      const vv = window.visualViewport;
+      setVp({
+        h:        vv ? vv.height    : window.innerHeight,
+        top:      vv ? vv.offsetTop : 0,
+        isMobile,
+      });
+    };
+    update();
+    const vv = window.visualViewport;
+    vv?.addEventListener("resize", update);
+    vv?.addEventListener("scroll", update);
+    window.addEventListener("resize", update);
+    return () => {
+      vv?.removeEventListener("resize", update);
+      vv?.removeEventListener("scroll", update);
+      window.removeEventListener("resize", update);
+    };
+  }, []);
 
   // Scroll to bottom on new content
   useEffect(() => {
@@ -189,8 +215,14 @@ export default function ChatBot() {
             animate={{ opacity: 1, scale: 1,    y: 0  }}
             exit=  {{ opacity: 0, scale: 0.92, y: 16 }}
             transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
-            style={{ transformOrigin: "bottom right" }}
-            /* mobile: full screen | sm+: floating window */
+            style={{
+              transformOrigin: "bottom right",
+              // Mobile: fill exactly the visual viewport (above keyboard)
+              ...(vp.isMobile && vp.h > 0
+                ? { position: "fixed", top: vp.top, left: 0, right: 0, height: vp.h, bottom: "auto" }
+                : {}),
+            }}
+            /* mobile: full screen via inline style | sm+: floating window */
             className="fixed z-[70] flex flex-col overflow-hidden bg-white shadow-2xl
                        inset-0 rounded-none
                        sm:inset-auto sm:bottom-[88px] sm:right-5 sm:w-[370px] sm:h-[580px] sm:rounded-3xl"
@@ -307,7 +339,8 @@ export default function ChatBot() {
                   onChange={e => setInput(e.target.value)}
                   onKeyDown={e => e.key === "Enter" && handleSend()}
                   placeholder="Napíšte otázku…"
-                  className="flex-1 bg-transparent text-[13.5px] text-gray-900 placeholder-gray-400 outline-none"
+                  className="flex-1 bg-transparent text-gray-900 placeholder-gray-400 outline-none"
+                  style={{ fontSize: 16 }}  /* 16px prevents iOS auto-zoom on focus */
                 />
                 <button
                   onClick={handleSend}
