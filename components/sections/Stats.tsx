@@ -19,7 +19,7 @@ export default function Stats() {
             <Reveal key={s.label} delay={i * 0.08}>
               <div>
                 <p className="font-display text-[44px] font-semibold leading-none tracking-tight text-ink-900 md:text-[56px]">
-                  <CountUp to={s.to} suffix={s.suffix} decimals={s.decimals ?? 0} />
+                  <CountUp to={s.to} suffix={s.suffix} />
                 </p>
                 <p className="mt-3 text-sm uppercase tracking-[0.14em] text-ink-400">{s.label}</p>
               </div>
