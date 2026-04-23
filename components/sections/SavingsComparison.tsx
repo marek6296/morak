@@ -63,7 +63,7 @@ export default function SavingsComparison() {
   const inView = useInView(ref, { once: true, margin: "-10%" });
 
   return (
-    <section className="section bg-ink-50/60">
+    <section className="pt-14 pb-10 md:pt-20 md:pb-12 lg:pt-24 lg:pb-14 bg-ink-50/60">
       <div className="container-lg">
         {/* Heading */}
         <motion.div
