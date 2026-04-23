@@ -195,7 +195,7 @@ export default function Hero() {
                 initial={{ opacity: 0, scale: 0.85, y: -10 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
-                className="absolute top-14 right-2 z-10"
+                className="absolute top-8 right-2 z-10"
               >
                 <div
                   className="rounded-2xl px-4 py-3 shadow-[0_8px_32px_rgba(34,197,94,0.35)]"
