@@ -15,7 +15,7 @@ const BRANDS = ["FRONIUS", "GOODWE", "HUAWEI", "DAIKIN", "HIKVISION", "SMA"];
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-white">
+    <section className="relative bg-white">
 
       {/* ── MOBILE HERO (< lg) — illustration as background, content anchored to bottom ── */}
       <div className="lg:hidden">
@@ -184,12 +184,12 @@ export default function Hero() {
               transition={{ duration: 1, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
               className="relative flex items-center justify-center"
             >
-              {/* Dotácia badge — floating outside top-right corner of card */}
+              {/* Dotácia badge — top-right, inside visible area */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.85, y: -10 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
-                className="absolute -top-4 -right-2 z-10"
+                className="absolute top-2 right-2 z-10"
               >
                 <div
                   className="rounded-2xl px-4 py-3 shadow-[0_8px_32px_rgba(34,197,94,0.35)]"
@@ -216,18 +216,16 @@ export default function Hero() {
                 <p className="mt-1 font-display text-3xl font-semibold text-ink-900">103+</p>
               </motion.div>
 
-              {/* Illustration */}
-              <div className="w-full overflow-hidden rounded-[32px]">
-                <Image
-                  src="/images/hero-pc.png"
-                  alt="Rodinný dom so solárnymi panelmi, batériou a elektroinštaláciou"
-                  width={1323}
-                  height={1189}
-                  priority
-                  sizes="(max-width: 1280px) 50vw, 620px"
-                  className="w-full h-auto max-h-[520px] object-contain"
-                />
-              </div>
+              {/* Illustration — no wrapper, white blends with page */}
+              <Image
+                src="/images/hero-pc.png"
+                alt="Rodinný dom so solárnymi panelmi, batériou a elektroinštaláciou"
+                width={1323}
+                height={1189}
+                priority
+                sizes="(max-width: 1280px) 50vw, 620px"
+                className="w-full h-auto max-h-[520px] object-contain"
+              />
             </motion.div>
           </div>
 
