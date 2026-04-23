@@ -186,15 +186,15 @@ export default function Hero() {
               transition={{ duration: 1, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
               className="relative flex items-center justify-center"
             >
-              {/* Dotácia badge floating top-right */}
+              {/* Dotácia badge — floating outside top-right corner of card */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.85, y: -10 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
-                className="absolute -top-2 right-0 z-10"
+                className="absolute -top-4 -right-2 z-10"
               >
                 <div
-                  className="rounded-2xl px-4 py-3 shadow-[0_8px_32px_rgba(34,197,94,0.3)]"
+                  className="rounded-2xl px-4 py-3 shadow-[0_8px_32px_rgba(34,197,94,0.35)]"
                   style={{ background: "linear-gradient(135deg, #22c55e 0%, #16a34a 100%)" }}
                 >
                   <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-green-100">Štátna dotácia</p>
@@ -205,12 +205,12 @@ export default function Hero() {
                 </div>
               </motion.div>
 
-              {/* Floating stat */}
+              {/* Floating stat — outside bottom-left corner of card */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.9, delay: 0.55 }}
-                className="absolute -left-4 bottom-12 z-10 rounded-2xl border border-ink-900/10 bg-white p-4 shadow-lift"
+                className="absolute -bottom-4 -left-4 z-10 rounded-2xl border border-ink-900/10 bg-white p-4 shadow-lift"
               >
                 <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-ink-400">
                   Dokončených projektov
@@ -218,16 +218,18 @@ export default function Hero() {
                 <p className="mt-1 font-display text-3xl font-semibold text-ink-900">103+</p>
               </motion.div>
 
-              {/* Illustration */}
-              <Image
-                src="/images/hero-pc.png"
-                alt="Rodinný dom so solárnymi panelmi, batériou a elektroinštaláciou"
-                width={1323}
-                height={1189}
-                priority
-                sizes="(max-width: 1280px) 50vw, 620px"
-                className="w-full h-auto max-h-[560px] object-contain drop-shadow-2xl"
-              />
+              {/* Illustration — framed card */}
+              <div className="w-full overflow-hidden rounded-[32px] bg-gradient-to-br from-brand/8 via-brand/5 to-ink-50 p-6 shadow-[0_8px_48px_-12px_rgba(0,0,0,0.12),0_0_0_1px_rgba(0,0,0,0.05)]">
+                <Image
+                  src="/images/hero-pc.png"
+                  alt="Rodinný dom so solárnymi panelmi, batériou a elektroinštaláciou"
+                  width={1323}
+                  height={1189}
+                  priority
+                  sizes="(max-width: 1280px) 50vw, 620px"
+                  className="w-full h-auto max-h-[480px] object-contain drop-shadow-xl"
+                />
+              </div>
             </motion.div>
           </div>
 
