@@ -80,24 +80,25 @@ export default function Header() {
         {open && (
           <motion.div
             key="mobile-menu"
-            className="fixed inset-0 z-[80] bg-ink-900 text-white lg:hidden"
-            initial={{ y: "-100%" }}
-            animate={{ y: 0 }}
-            exit={{ y: "-100%" }}
+            className="fixed inset-0 z-[80] lg:hidden overflow-y-auto"
+            style={{ backgroundColor: '#0B1220', color: '#ffffff', willChange: 'transform' }}
+            initial={{ opacity: 0, y: "-100%" }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: "-100%" }}
             transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
           >
-            <div className="container-lg flex h-full flex-col">
+            <div className="container-lg flex min-h-screen flex-col" style={{ color: '#ffffff' }}>
               <div className="flex items-center justify-between py-5">
-                <Image src="/logo.png" alt="MORAK" width={1039} height={163} className="h-7 w-auto" />
+                <Image src="/logo.png" alt="MORAK" width={1039} height={163} className="h-7 w-auto brightness-0 invert" />
                 <button
                   aria-label="Zavrieť menu"
-                  className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/20"
+                  className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-white"
                   onClick={() => setOpen(false)}
                 >
                   <CloseIcon />
                 </button>
               </div>
-              <nav className="mt-6 flex flex-col gap-5 overflow-y-auto">
+              <nav className="mt-6 flex flex-col gap-5">
                 {NAV_LINKS.map((l, i) => (
                   <motion.div
                     key={l.href}
@@ -107,7 +108,7 @@ export default function Header() {
                   >
                     <Link
                       href={l.href}
-                      className="font-display text-3xl font-semibold tracking-tight"
+                      className="block font-display text-3xl font-semibold tracking-tight text-white"
                       onClick={() => setOpen(false)}
                     >
                       {l.label}
@@ -115,7 +116,7 @@ export default function Header() {
                   </motion.div>
                 ))}
               </nav>
-              <div className="mt-auto pb-10">
+              <div className="mt-auto pb-10 pt-8">
                 <Link href="/kontakt" onClick={() => setOpen(false)} className="btn-primary w-full justify-center">
                   Cenová ponuka
                   <ArrowRightIcon size={16} />
