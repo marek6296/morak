@@ -14,7 +14,7 @@ type Props = {
 
 export default function CountUp({ to, duration = 1.8, suffix = "", prefix = "", decimals = 0, className }: Props) {
   const ref = useRef<HTMLSpanElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-20%" });
+  const inView = useInView(ref, { once: true, margin: "0px" });
   const mv = useMotionValue(0);
   const rounded = useTransform(mv, (v) => `${prefix}${v.toFixed(decimals).replace(".", ",")}${suffix}`);
 
