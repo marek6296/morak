@@ -21,12 +21,12 @@ export default function Hero() {
       <div className="lg:hidden">
         <div className="relative h-[78svh] min-h-[520px]">
           <Image
-            src="https://images.pexels.com/photos/159397/solar-panel-array-power-sun-electricity-159397.jpeg?auto=compress&cs=tinysrgb&w=1920"
+            src="/images/hero-solar.jpg"
             alt="Solárne panely na streche rodinného domu"
             fill
             priority
             sizes="100vw"
-            className="object-cover object-top"
+            className="object-cover object-center"
           />
           {/* Gradient */}
           <div className="absolute inset-0 bg-gradient-to-t from-ink-900/95 via-ink-900/30 to-transparent" />
@@ -203,7 +203,7 @@ export default function Hero() {
             >
               <div className="relative h-[520px] overflow-hidden rounded-[28px] bg-ink-800 shadow-lift">
                 <Image
-                  src="https://images.pexels.com/photos/159397/solar-panel-array-power-sun-electricity-159397.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                  src="/images/hero-solar.jpg"
                   alt="Montáž solárnych panelov na streche rodinného domu"
                   fill
                   priority
