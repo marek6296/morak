@@ -1,4 +1,5 @@
 import Hero from "@/components/sections/Hero";
+import HowItWorks from "@/components/sections/HowItWorks";
 import SavingsComparison from "@/components/sections/SavingsComparison";
 import Services from "@/components/sections/Services";
 import Stats from "@/components/sections/Stats";
@@ -10,6 +11,7 @@ export default function HomePage() {
   return (
     <>
       <Hero />
+      <HowItWorks />
       <SavingsComparison />
       <Services />
       <Stats />
