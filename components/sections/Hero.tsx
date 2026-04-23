@@ -21,15 +21,41 @@ export default function Hero() {
       <div className="lg:hidden">
         <div className="relative h-[78svh] min-h-[520px]">
           <Image
-            src="https://images.unsplash.com/photo-1655300256335-beef51a914fe?w=900&q=85&auto=format&fit=crop"
+            src="https://images.unsplash.com/photo-1655300256335-beef51a914fe?w=1920&q=90&auto=format&fit=crop"
             alt="Solárne panely na streche rodinného domu"
             fill
             priority
             sizes="100vw"
             className="object-cover object-top"
           />
-          {/* Gradient — lighter at top, heavy dark at bottom */}
-          <div className="absolute inset-0 bg-gradient-to-t from-ink-900/95 via-ink-900/45 to-transparent" />
+          {/* Gradient */}
+          <div className="absolute inset-0 bg-gradient-to-t from-ink-900/95 via-ink-900/30 to-transparent" />
+
+          {/* ── DOTÁCIA BADGE — floating top-left, bold & eye-catching ── */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.85, y: -10 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+            className="absolute left-4 top-4"
+          >
+            <div
+              className="rounded-2xl px-4 py-3 shadow-[0_8px_32px_rgba(0,0,0,0.35)]"
+              style={{ background: "linear-gradient(135deg, #22c55e 0%, #16a34a 100%)" }}
+            >
+              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-green-100">
+                Štátna dotácia
+              </p>
+              <p
+                className="font-display leading-none text-white"
+                style={{ fontSize: "2rem", fontWeight: 900 }}
+              >
+                7 500 €
+              </p>
+              <p className="mt-0.5 text-[11px] font-semibold text-green-100">
+                Zelená domácnostiam III
+              </p>
+            </div>
+          </motion.div>
 
           {/* Text + CTA anchored to bottom of image */}
           <div className="absolute inset-x-0 bottom-0 px-5 pb-6">
@@ -39,11 +65,6 @@ export default function Hero() {
               transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
               className="flex flex-col gap-2.5"
             >
-              {/* Eyebrow badge */}
-              <span className="inline-flex w-fit items-center rounded-full border border-brand/30 bg-brand/20 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-brand-200 backdrop-blur-sm">
-                Zelená domácnostiam · Dotácia až 7 500 €
-              </span>
-
               {/* Headline */}
               <h1 className="font-display text-[1.95rem] font-semibold leading-[1.12] tracking-tight text-white">
                 Elektrina, ktorú si vyrábate sami.
