@@ -49,10 +49,10 @@ export default function Footer() {
           <div className="md:col-span-2">
             <h4 className="text-xs font-semibold uppercase tracking-[0.18em] text-ink-300">Spoločnosť</h4>
             <ul className="mt-4 space-y-3 text-sm">
-              <li><Link href="/#preco-morak" className="hover:text-brand">O firme</Link></li>
-              <li><Link href="/#realizacie" className="hover:text-brand">Realizácie</Link></li>
-              <li><Link href="/#proces" className="hover:text-brand">Ako pracujeme</Link></li>
-              <li><Link href="/#faq" className="hover:text-brand">Časté otázky</Link></li>
+              <li><Link href="/preco-morak" className="hover:text-brand">Prečo MORAK</Link></li>
+              <li><Link href="/realizacie" className="hover:text-brand">Realizácie</Link></li>
+              <li><Link href="/kontakt" className="hover:text-brand">Kontakt</Link></li>
+              <li><Link href="/kontakt" className="hover:text-brand">Cenová ponuka</Link></li>
             </ul>
           </div>
 
@@ -82,8 +82,8 @@ export default function Footer() {
         <div className="mt-14 flex flex-col gap-4 border-t border-white/10 pt-6 text-xs text-ink-300 sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} MORAK. Všetky práva vyhradené. IČO {COMPANY.ico} &middot; DIČ {COMPANY.dic}</p>
           <div className="flex gap-6">
-            <Link href="/#faq" className="hover:text-brand">Reklamačný poriadok</Link>
-            <Link href="/#faq" className="hover:text-brand">Ochrana osobných údajov</Link>
+            <Link href="/kontakt" className="hover:text-brand">Reklamačný poriadok</Link>
+            <Link href="/kontakt" className="hover:text-brand">Ochrana osobných údajov</Link>
           </div>
         </div>
       </div>

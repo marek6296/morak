@@ -36,10 +36,12 @@ export const SERVICES = [
 export type ServiceSlug = (typeof SERVICES)[number]["slug"];
 
 export const NAV_LINKS = [
-  { href: "/#sluzby", label: "Služby" },
-  { href: "/#preco-morak", label: "Prečo MORAK" },
-  { href: "/#realizacie", label: "Realizácie" },
-  { href: "/#proces", label: "Proces" },
+  { href: "/fotovoltika", label: "Fotovoltika" },
+  { href: "/klimatizacie", label: "Klimatizácie" },
+  { href: "/kamerove-systemy", label: "Kamerové systémy" },
+  { href: "/elektroinstalacie", label: "Elektroinštalácie" },
+  { href: "/realizacie", label: "Realizácie" },
+  { href: "/preco-morak", label: "Prečo MORAK" },
   { href: "/kontakt", label: "Kontakt" }
 ];
 

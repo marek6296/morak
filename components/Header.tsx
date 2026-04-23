@@ -24,10 +24,10 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
+      className={`sticky top-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-white/85 backdrop-blur-xl border-b border-ink-900/8 py-3"
-          : "bg-transparent py-5"
+          ? "bg-white/90 backdrop-blur-xl border-b border-ink-900/8 py-3"
+          : "bg-white/70 backdrop-blur-md py-4"
       }`}
     >
       <div className="container-lg flex items-center justify-between">
@@ -42,12 +42,12 @@ export default function Header() {
           />
         </Link>
 
-        <nav className="hidden items-center gap-8 lg:flex">
+        <nav className="hidden items-center gap-6 lg:flex xl:gap-7">
           {NAV_LINKS.map((l) => (
             <Link
               key={l.href}
               href={l.href}
-              className="group relative text-sm font-medium tracking-wide text-ink-700 transition-colors hover:text-ink-900"
+              className="group relative text-[13px] font-medium tracking-wide text-ink-700 transition-colors hover:text-ink-900 xl:text-sm"
             >
               {l.label}
               <span className="absolute -bottom-1.5 left-0 h-[2px] w-0 bg-brand transition-all duration-300 group-hover:w-full" />

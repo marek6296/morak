@@ -13,7 +13,7 @@ const PERKS = [
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden pt-28 md:pt-36">
+    <section className="relative overflow-hidden pt-10 md:pt-16">
       <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-[720px] bg-radial-fade" />
 
       <div className="container-lg relative">

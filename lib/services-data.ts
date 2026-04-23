@@ -21,6 +21,8 @@ export type ServiceData = {
   heroLead: string;
   heroImage: string;
   icon: IconKey;
+  hookTitle: string;
+  hookSubtitle: string;
   highlights: { icon: IconKey; label: string; value: string }[];
   features: { icon: IconKey; title: string; text: string }[];
   includes: string[];
@@ -38,6 +40,8 @@ export const SERVICE_DATA: Record<string, ServiceData> = {
     heroImage:
       "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=1600&q=80&auto=format&fit=crop",
     icon: "solar",
+    hookTitle: "Dotácia až 7 500 €",
+    hookSubtitle: "Zelená domácnostiam III + ročná úspora až 1 800 €",
     highlights: [
       { icon: "spark", label: "Úspora ročne až", value: "1 800 €" },
       { icon: "badge", label: "Dotácia až", value: "7 500 €" },
@@ -103,6 +107,8 @@ export const SERVICE_DATA: Record<string, ServiceData> = {
     heroImage:
       "https://images.unsplash.com/photo-1631545308456-1e3cc78eb37d?w=1600&q=80&auto=format&fit=crop",
     icon: "climate",
+    hookTitle: "Klimatizácia na kľúč od 1 100 €",
+    hookSubtitle: "Tichá A+++ jednotka s montážou a zárukou 5 rokov",
     highlights: [
       { icon: "spark", label: "Úroveň hluku od", value: "19 dB" },
       { icon: "badge", label: "Energetická trieda", value: "A+++" },
@@ -168,6 +174,8 @@ export const SERVICE_DATA: Record<string, ServiceData> = {
     heroImage:
       "https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=1600&q=80&auto=format&fit=crop",
     icon: "camera",
+    hookTitle: "4K kamerový systém od 890 €",
+    hookSubtitle: "Vzdialený prístup z mobilu a GDPR dokumentácia v cene",
     highlights: [
       { icon: "spark", label: "Rozlíšenie až", value: "4K UHD" },
       { icon: "shield", label: "Záznam až", value: "90 dní" },
@@ -233,6 +241,8 @@ export const SERVICE_DATA: Record<string, ServiceData> = {
     heroImage:
       "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=1600&q=80&auto=format&fit=crop",
     icon: "electric",
+    hookTitle: "Elektroinštalácia s úradnou revíziou v cene",
+    hookSubtitle: "Nasadenie do 7 dní • oprávnenie §22 / §23",
     highlights: [
       { icon: "badge", label: "Oprávnenie", value: "§22 / §23" },
       { icon: "shield", label: "Revízia", value: "v cene" },

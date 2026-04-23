@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import ContactForm from "@/components/ContactForm";
 import Reveal from "@/components/Reveal";
 import { COMPANY } from "@/lib/nav";
-import { PhoneIcon, MailIcon, PinIcon, ClockIcon } from "@/components/icons";
+import { PhoneIcon, MailIcon, PinIcon, ClockIcon, ArrowRightIcon } from "@/components/icons";
 
 export const metadata: Metadata = {
   title: "Kontakt",
@@ -13,7 +14,25 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
-      <section className="relative overflow-hidden pt-28 md:pt-36">
+      {/* Hook banner */}
+      <section className="relative bg-brand/10 border-b border-brand/20">
+        <div className="container-lg flex flex-col items-start gap-3 py-5 md:flex-row md:items-center md:justify-between">
+          <p className="text-sm leading-snug text-ink-900 md:text-[15px]">
+            <span className="font-semibold">Bezplatná konzultácia a cenová ponuka</span>
+            <span className="mx-2 text-ink-400">•</span>
+            <span className="text-ink-700">odpoveď do 24 hodín priamo od technika</span>
+          </p>
+          <Link
+            href={COMPANY.phoneHref}
+            className="inline-flex items-center gap-1.5 whitespace-nowrap text-sm font-semibold text-ink-900 hover:text-brand-700"
+          >
+            Zavolať {COMPANY.phone}
+            <ArrowRightIcon size={14} />
+          </Link>
+        </div>
+      </section>
+
+      <section className="relative overflow-hidden pt-12 md:pt-20">
         <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-[520px] bg-radial-fade" />
         <div className="container-lg relative">
           <Reveal>
