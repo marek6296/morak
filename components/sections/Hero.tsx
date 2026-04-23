@@ -218,8 +218,8 @@ export default function Hero() {
                 <p className="mt-1 font-display text-3xl font-semibold text-ink-900">103+</p>
               </motion.div>
 
-              {/* Illustration — framed card */}
-              <div className="w-full overflow-hidden rounded-[32px] bg-gradient-to-br from-brand/8 via-brand/5 to-ink-50 p-6 shadow-[0_8px_48px_-12px_rgba(0,0,0,0.12),0_0_0_1px_rgba(0,0,0,0.05)]">
+              {/* Illustration */}
+              <div className="w-full overflow-hidden rounded-[32px]">
                 <Image
                   src="/images/hero-pc.png"
                   alt="Rodinný dom so solárnymi panelmi, batériou a elektroinštaláciou"
@@ -227,7 +227,7 @@ export default function Hero() {
                   height={1189}
                   priority
                   sizes="(max-width: 1280px) 50vw, 620px"
-                  className="w-full h-auto max-h-[480px] object-contain drop-shadow-xl"
+                  className="w-full h-auto max-h-[520px] object-contain"
                 />
               </div>
             </motion.div>
