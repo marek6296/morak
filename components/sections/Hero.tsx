@@ -181,7 +181,13 @@ export default function Hero() {
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+              whileHover={{ scale: 1.045, y: -8 }}
+              transition={{
+                opacity: { duration: 1, delay: 0.15, ease: [0.22, 1, 0.36, 1] },
+                x:       { duration: 1, delay: 0.15, ease: [0.22, 1, 0.36, 1] },
+                scale:   { type: "spring", stiffness: 220, damping: 22 },
+                y:       { type: "spring", stiffness: 220, damping: 22 },
+              }}
               className="relative flex items-center justify-center"
             >
               {/* Dotácia badge — top-right, inside visible area */}
