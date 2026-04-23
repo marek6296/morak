@@ -15,7 +15,7 @@ const BRANDS = ["FRONIUS", "GOODWE", "HUAWEI", "DAIKIN", "HIKVISION", "SMA"];
 
 export default function Hero() {
   return (
-    <section className="relative bg-white">
+    <section className="relative" style={{ backgroundColor: "#fafafa" }}>
 
       {/* ── MOBILE HERO (< lg) — illustration as background, content anchored to bottom ── */}
       <div className="lg:hidden">
@@ -88,7 +88,7 @@ export default function Hero() {
         </div>
 
         {/* Below-fold: perks + brand strip */}
-        <div className="bg-white px-5 py-8">
+        <div className="px-5 py-8" style={{ backgroundColor: "#fafafa" }}>
           <ul className="grid gap-3">
             {PERKS.map((p) => (
               <li key={p} className="flex items-center gap-3 text-[14px] text-ink-700">
