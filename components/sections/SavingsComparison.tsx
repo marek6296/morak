@@ -88,7 +88,7 @@ export default function SavingsComparison() {
         </motion.div>
 
         {/* Cards */}
-        <div ref={ref} className="mt-14 grid gap-5 md:grid-cols-3">
+        <div ref={ref} className="mt-10 grid gap-5 md:grid-cols-3">
           {CARDS.map((card, i) => (
             <motion.div
               key={card.title}
