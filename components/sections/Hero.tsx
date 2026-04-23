@@ -15,11 +15,6 @@ export default function Hero() {
   return (
     <section className="relative overflow-hidden pt-28 md:pt-36">
       <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-[720px] bg-radial-fade" />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-x-0 top-20 h-[520px] opacity-[0.35] bg-grid-faint mask-radial"
-        style={{ backgroundSize: "36px 36px" }}
-      />
 
       <div className="container-lg relative">
         <div className="grid items-center gap-12 lg:grid-cols-12">

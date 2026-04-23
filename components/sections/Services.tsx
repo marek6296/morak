@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import Reveal from "@/components/Reveal";
 import { SERVICES } from "@/lib/nav";
@@ -17,6 +18,17 @@ const ICONS = {
   klimatizacie: ClimateIcon,
   "kamerove-systemy": CameraIcon,
   elektroinstalacie: ElectricIcon
+};
+
+const IMAGES: Record<string, string> = {
+  fotovoltika:
+    "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1200&q=80&auto=format&fit=crop",
+  klimatizacie:
+    "https://images.unsplash.com/photo-1631545308456-1e3cc78eb37d?w=1200&q=80&auto=format&fit=crop",
+  "kamerove-systemy":
+    "https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=1200&q=80&auto=format&fit=crop",
+  elektroinstalacie:
+    "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=1200&q=80&auto=format&fit=crop"
 };
 
 const DETAILS: Record<string, string[]> = {
@@ -74,37 +86,51 @@ export default function Services() {
               >
                 <Link
                   href={`/${s.slug}`}
-                  className="group relative block h-full overflow-hidden rounded-3xl border border-ink-900/8 bg-white p-8 shadow-soft transition-all duration-500 hover:-translate-y-1 hover:border-brand-300 hover:shadow-lift md:p-10"
+                  className="group relative block h-full overflow-hidden rounded-3xl border border-ink-900/8 bg-white shadow-soft transition-all duration-500 hover:-translate-y-1 hover:border-brand-300 hover:shadow-lift"
                 >
-                  <div className="pointer-events-none absolute -right-20 -top-20 h-60 w-60 rounded-full bg-brand/10 blur-3xl transition-all duration-700 group-hover:bg-brand/20" />
+                  {/* Image banner */}
+                  <div className="relative aspect-[16/10] overflow-hidden bg-ink-900">
+                    <Image
+                      src={IMAGES[s.slug]}
+                      alt={s.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-ink-900/55 via-ink-900/10 to-transparent" />
 
-                  <div className="relative flex items-start justify-between gap-6">
-                    <div className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-ink-900 text-brand transition-all duration-500 group-hover:scale-105 group-hover:bg-brand group-hover:text-ink-900">
-                      <Icon size={28} />
+                    {/* Icon badge */}
+                    <div className="absolute left-6 top-6 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-white/95 text-ink-900 shadow-lift backdrop-blur">
+                      <Icon size={24} />
                     </div>
-                    <span className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-ink-900/10 text-ink-700 transition-all duration-500 group-hover:border-ink-900 group-hover:bg-ink-900 group-hover:text-white">
+
+                    {/* Arrow indicator */}
+                    <span className="absolute right-6 top-6 inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/30 bg-white/10 text-white backdrop-blur transition-all duration-500 group-hover:bg-brand group-hover:text-ink-900 group-hover:border-brand">
                       <ArrowUpRightIcon size={18} />
                     </span>
                   </div>
 
-                  <h3 className="mt-8 font-display text-2xl font-semibold tracking-tight text-ink-900 md:text-[26px]">
-                    {s.title}
-                  </h3>
-                  <p className="mt-3 text-[15px] leading-relaxed text-ink-500">{s.summary}</p>
+                  {/* Content */}
+                  <div className="p-8 md:p-10">
+                    <h3 className="font-display text-2xl font-semibold tracking-tight text-ink-900 md:text-[26px]">
+                      {s.title}
+                    </h3>
+                    <p className="mt-3 text-[15px] leading-relaxed text-ink-500">{s.summary}</p>
 
-                  <ul className="mt-6 space-y-2 border-t border-ink-900/8 pt-5">
-                    {DETAILS[s.slug].map((d) => (
-                      <li key={d} className="flex items-start gap-2.5 text-sm text-ink-700">
-                        <span className="mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-brand" />
-                        <span>{d}</span>
-                      </li>
-                    ))}
-                  </ul>
+                    <ul className="mt-6 space-y-2 border-t border-ink-900/8 pt-5">
+                      {DETAILS[s.slug].map((d) => (
+                        <li key={d} className="flex items-start gap-2.5 text-sm text-ink-700">
+                          <span className="mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-brand" />
+                          <span>{d}</span>
+                        </li>
+                      ))}
+                    </ul>
 
-                  <span className="mt-7 inline-flex items-center gap-1.5 text-sm font-semibold text-ink-900 transition-colors group-hover:text-brand-700">
-                    Viac o službe
-                    <ArrowUpRightIcon size={14} />
-                  </span>
+                    <span className="mt-7 inline-flex items-center gap-1.5 text-sm font-semibold text-ink-900 transition-colors group-hover:text-brand-700">
+                      Viac o službe
+                      <ArrowUpRightIcon size={14} />
+                    </span>
+                  </div>
                 </Link>
               </motion.div>
             );
