@@ -81,11 +81,11 @@ export default function Header() {
           <motion.div
             key="mobile-menu"
             className="fixed inset-0 z-[80] lg:hidden overflow-y-auto"
-            style={{ backgroundColor: '#0B1220', color: '#ffffff', willChange: 'transform' }}
-            initial={{ opacity: 0, y: "-100%" }}
+            style={{ backgroundColor: '#0B1220', color: '#ffffff' }}
+            initial={{ opacity: 0, y: -16 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: "-100%" }}
-            transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+            exit={{ opacity: 0, y: -16 }}
+            transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
           >
             <div className="container-lg flex min-h-screen flex-col" style={{ color: '#ffffff' }}>
               <div className="flex items-center justify-between py-5">
@@ -116,7 +116,7 @@ export default function Header() {
                   </motion.div>
                 ))}
               </nav>
-              <div className="mt-auto pb-10 pt-8">
+              <div className="mt-8 pb-8">
                 <Link href="/kontakt" onClick={() => setOpen(false)} className="btn-primary w-full justify-center">
                   Cenová ponuka
                   <ArrowRightIcon size={16} />
