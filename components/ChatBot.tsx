@@ -8,72 +8,72 @@ type Message = { id: string; from: "bot" | "user"; text: string };
 
 // ── Static data ────────────────────────────────────────────────────────────
 const QUICK_REPLIES = [
-  { id: "ceny",    label: "💰 Aké sú vaše ceny?" },
-  { id: "postup",  label: "📋 Postup objednávky" },
-  { id: "zaruky",  label: "🛡️ Záruky a certifikácie" },
-  { id: "pobocky", label: "📍 Kde pôsobíte?" },
-  { id: "ponuka",  label: "✉️ Chcem cenovú ponuku" },
-  { id: "dotacia", label: "🌿 Dotácia 7 500 €" },
+  { id: "ceny",    label: "Aké sú vaše ceny?" },
+  { id: "postup",  label: "Postup objednávky" },
+  { id: "zaruky",  label: "Záruky a certifikácie" },
+  { id: "pobocky", label: "Kde pôsobíte?" },
+  { id: "ponuka",  label: "Chcem cenovú ponuku" },
+  { id: "dotacia", label: "Dotácia 7 500 €" },
 ];
 
 const ANSWERS: Record<string, string> = {
   ceny:
     "Orientačné ceny našich služieb:\n\n" +
-    "🔆 Fotovoltika: od 4 500 € (6 kWp s montážou)\n" +
-    "❄️ Klimatizácia: od 1 100 € (split jednotka)\n" +
-    "📷 Kamerový systém: od 890 € (4 kamery)\n" +
-    "⚡ Elektroinštalácia: podľa rozsahu projektu\n\n" +
+    "Fotovoltika: od 4 500 € (6 kWp s montážou)\n" +
+    "Klimatizácia: od 1 100 € (split jednotka)\n" +
+    "Kamerový systém: od 890 € (4 kamery)\n" +
+    "Elektroinštalácia: podľa rozsahu projektu\n\n" +
     "Cenová ponuka na mieru je vždy zdarma a nezáväzná.",
 
   postup:
     "Náš postup je jednoduchý:\n\n" +
-    "1️⃣ Bezplatná konzultácia a obhliadka\n" +
-    "2️⃣ Cenová ponuka do 24 hodín\n" +
-    "3️⃣ Zmluva s pevnou cenou bez prekvapení\n" +
-    "4️⃣ Realizácia certifikovaným tímom\n" +
-    "5️⃣ Odovzdanie s dokumentáciou a zárukou\n\n" +
+    "1. Bezplatná konzultácia a obhliadka\n" +
+    "2. Cenová ponuka do 24 hodín\n" +
+    "3. Zmluva s pevnou cenou bez prekvapení\n" +
+    "4. Realizácia certifikovaným tímom\n" +
+    "5. Odovzdanie s dokumentáciou a zárukou\n\n" +
     "Od prvého kontaktu po odovzdanie zvyčajne 2–4 týždne.",
 
   zaruky:
     "Naše záruky a certifikácie:\n\n" +
-    "✅ 5-ročná záruka na montážne práce\n" +
-    "✅ Výrobcovská záruka 10–25 rokov na komponenty\n" +
-    "✅ Oprávnenia §22 a §23, certifikáty SOI\n" +
-    "✅ Certifikát pre F-plyny a prácu vo výškach\n" +
-    "✅ Kompletná dokumentácia a revízia v cene\n\n" +
+    "— 5-ročná záruka na montážne práce\n" +
+    "— Výrobcovská záruka 10–25 rokov na komponenty\n" +
+    "— Oprávnenia §22 a §23, certifikáty SOI\n" +
+    "— Certifikát pre F-plyny a prácu vo výškach\n" +
+    "— Kompletná dokumentácia a revízia v cene\n\n" +
     "Záručný aj pozáručný servis po celom Slovensku.",
 
   pobocky:
     "Pôsobíme na celom Slovensku.\n\n" +
-    "📍 Sídlo: Prešov\n" +
-    "🚗 Pokrývame: Košický, Prešovský kraj a okolie\n" +
-    "📞 Servisná reakcia do 24 hodín\n\n" +
+    "Sídlo: Prešov\n" +
+    "Pokrývame: Košický, Prešovský kraj a okolie\n" +
+    "Servisná reakcia do 24 hodín\n\n" +
     "Obhliadku urobíme kdekoľvek — stačí nás kontaktovať.",
 
   ponuka:
     "Radi vám pripravíme ponuku zadarmo!\n\n" +
-    "📞 +421 903 123 456\n" +
-    "✉️ info@morak.sk\n" +
-    "📋 Formulár v sekcii Kontakt na webe\n\n" +
+    "Tel.: +421 903 123 456\n" +
+    "E-mail: info@morak.sk\n" +
+    "Formulár v sekcii Kontakt na webe\n\n" +
     "Odpovedáme do 24 hodín — priamo od technika, nie call-centrum.",
 
   dotacia:
     "Dotácia Zelená domácnostiam III:\n\n" +
-    "💰 Až 7 500 € na fotovoltickú elektrárňu\n" +
-    "📊 Pokrýva 30–50 % celkovej ceny inštalácie\n" +
-    "🏠 Platí pre rodinné domy aj bytovky\n" +
-    "📋 Vybavenie dotácie zaistíme komplet za vás\n\n" +
+    "Až 7 500 € na fotovoltickú elektrárňu\n" +
+    "Pokrýva 30–50 % celkovej ceny inštalácie\n" +
+    "Platí pre rodinné domy aj bytovky\n" +
+    "Vybavenie dotácie zaistíme komplet za vás\n\n" +
     "Celú byrokraciu od registrácie po záverečné vyúčtovanie riešime my.",
 };
 
 const WELCOME =
-  "Dobrý deň! Som MORAK Asistent 👋\n\n" +
+  "Dobrý deň! Som MORAK Asistent.\n\n" +
   "Pomôžem vám s informáciami o fotovoltike, klimatizáciách, kamerových systémoch a elektroinštaláciách.\n\n" +
   "Vyberte tému alebo napíšte otázku:";
 
 const GENERIC =
   "Ďakujeme za vašu otázku! Náš tím vám odpovie do 24 hodín.\n\n" +
-  "📞 +421 903 123 456\n✉️ info@morak.sk";
+  "Tel.: +421 903 123 456\nE-mail: info@morak.sk";
 
 // ── Helpers ────────────────────────────────────────────────────────────────
 let _id = 0;
