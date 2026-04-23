@@ -59,7 +59,7 @@ export default function WhyUs() {
               <div className="mt-10 overflow-hidden rounded-3xl border border-white/10">
                 <div className="relative aspect-[4/3]">
                   <Image
-                    src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80&auto=format&fit=crop"
+                    src="https://images.unsplash.com/photo-1642749776312-aa42ce20c9f5?w=1200&q=80&auto=format&fit=crop"
                     alt="Technik pri inštalácii"
                     fill
                     sizes="(max-width: 1024px) 100vw, 40vw"

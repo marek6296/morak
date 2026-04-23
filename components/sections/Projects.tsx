@@ -23,7 +23,7 @@ const PROJECTS: Project[] = [
     category: "Fotovoltika",
     year: "2025",
     image:
-      "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=1400&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/flagged/photo-1566838616631-f2618f74a6a2?w=1400&q=80&auto=format&fit=crop",
     size: "lg"
   },
   {
@@ -32,7 +32,7 @@ const PROJECTS: Project[] = [
     category: "Klimatizácie",
     year: "2025",
     image:
-      "https://images.unsplash.com/photo-1631545308456-1e3cc78eb37d?w=1200&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1766788466565-768128d89ce4?w=1200&q=80&auto=format&fit=crop",
     size: "md"
   },
   {
@@ -41,7 +41,7 @@ const PROJECTS: Project[] = [
     category: "Kamery",
     year: "2024",
     image:
-      "https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=1200&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1640826028382-e209fad88fa7?w=1200&q=80&auto=format&fit=crop",
     size: "md"
   },
   {
@@ -50,7 +50,7 @@ const PROJECTS: Project[] = [
     category: "Elektro",
     year: "2024",
     image:
-      "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=1200&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1754620906571-9ba64bd3ffb4?w=1200&q=80&auto=format&fit=crop",
     size: "md"
   },
   {
@@ -59,7 +59,7 @@ const PROJECTS: Project[] = [
     category: "Fotovoltika",
     year: "2024",
     image:
-      "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=1200&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1655300256335-beef51a914fe?w=1200&q=80&auto=format&fit=crop",
     size: "md"
   },
   {
@@ -68,7 +68,7 @@ const PROJECTS: Project[] = [
     category: "Klimatizácie",
     year: "2025",
     image:
-      "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=1200&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1695668544997-0d342ec08036?w=1200&q=80&auto=format&fit=crop",
     size: "lg"
   }
 ];

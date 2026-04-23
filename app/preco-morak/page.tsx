@@ -91,7 +91,7 @@ export default function PrecoMorakPage() {
               <div className="relative lg:col-span-5">
                 <div className="relative aspect-[4/5] overflow-hidden rounded-[28px] bg-ink-800 shadow-lift">
                   <Image
-                    src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=1200&q=80&auto=format&fit=crop"
+                    src="https://images.unsplash.com/photo-1642749776312-aa42ce20c9f5?w=1200&q=80&auto=format&fit=crop"
                     alt="MORAK tím pri práci"
                     fill
                     sizes="(max-width: 1024px) 100vw, 40vw"

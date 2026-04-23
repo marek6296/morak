@@ -38,7 +38,7 @@ export const SERVICE_DATA: Record<string, ServiceData> = {
     heroLead:
       "Navrhujeme a montujeme fotovoltické elektrárne, ktoré pokryjú reálnu spotrebu vašej domácnosti alebo firmy. Všetko s dotáciou Zelená domácnostiam III a plnou dokumentáciou.",
     heroImage:
-      "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=1600&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1655300256335-beef51a914fe?w=1600&q=80&auto=format&fit=crop",
     icon: "solar",
     hookTitle: "Dotácia až 7 500 €",
     hookSubtitle: "Zelená domácnostiam III + ročná úspora až 1 800 €",
@@ -79,8 +79,8 @@ export const SERVICE_DATA: Record<string, ServiceData> = {
     ],
     gallery: [
       "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1200&q=80&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=1200&q=80&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1548337138-e87d889cc369?w=1200&q=80&auto=format&fit=crop"
+      "https://images.unsplash.com/photo-1583345237708-add35a664d77?w=1200&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/flagged/photo-1566838616631-f2618f74a6a2?w=1200&q=80&auto=format&fit=crop"
     ],
     faq: [
       {
@@ -105,7 +105,7 @@ export const SERVICE_DATA: Record<string, ServiceData> = {
     heroLead:
       "Ticho, efektívne, s certifikovanou montážou. Inštalujeme klimatizácie a tepelné čerpadlá, ktoré chladia v lete, kúria v zime a šetria náklady po celý rok.",
     heroImage:
-      "https://images.unsplash.com/photo-1631545308456-1e3cc78eb37d?w=1600&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1766788466565-768128d89ce4?w=1600&q=80&auto=format&fit=crop",
     icon: "climate",
     hookTitle: "Klimatizácia na kľúč od 1 100 €",
     hookSubtitle: "Tichá A+++ jednotka s montážou a zárukou 5 rokov",
@@ -145,9 +145,9 @@ export const SERVICE_DATA: Record<string, ServiceData> = {
       "Zazmluvnený ročný servis s čistením"
     ],
     gallery: [
-      "https://images.unsplash.com/photo-1617850687395-620757feb1f3?w=1200&q=80&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=1200&q=80&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1531973486364-5fa64260d75b?w=1200&q=80&auto=format&fit=crop"
+      "https://images.unsplash.com/photo-1766788466565-768128d89ce4?w=1200&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1695668544997-0d342ec08036?w=1200&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1642749776312-aa42ce20c9f5?w=1200&q=80&auto=format&fit=crop"
     ],
     faq: [
       {
@@ -172,7 +172,7 @@ export const SERVICE_DATA: Record<string, ServiceData> = {
     heroLead:
       "4K IP kamery, nočné videnie, inteligentná detekcia pohybu a vzdialený prístup z mobilu. Navrhujeme systémy, ktoré skutočne fungujú — nielen svietia ako atrapa.",
     heroImage:
-      "https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=1600&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1543963233-c815c054b782?w=1600&q=80&auto=format&fit=crop",
     icon: "camera",
     hookTitle: "4K kamerový systém od 890 €",
     hookSubtitle: "Vzdialený prístup z mobilu a GDPR dokumentácia v cene",
@@ -212,9 +212,9 @@ export const SERVICE_DATA: Record<string, ServiceData> = {
       "Školenie obsluhy a záručný servis"
     ],
     gallery: [
-      "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=1200&q=80&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1590856029826-c7a73142bbf1?w=1200&q=80&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=1200&q=80&auto=format&fit=crop"
+      "https://images.unsplash.com/photo-1543963233-c815c054b782?w=1200&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1640826028382-e209fad88fa7?w=1200&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1739203469638-d6f54c24a5da?w=1200&q=80&auto=format&fit=crop"
     ],
     faq: [
       {
@@ -239,7 +239,7 @@ export const SERVICE_DATA: Record<string, ServiceData> = {
     heroLead:
       "Od prvého káblového vývodu po odovzdanie s úradnou revíziou. Realizujeme silnoprúdové aj slaboprúdové rozvody pre novostavby, rekonštrukcie a priemyselné objekty.",
     heroImage:
-      "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=1600&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=1600&q=80&auto=format&fit=crop",
     icon: "electric",
     hookTitle: "Elektroinštalácia s úradnou revíziou v cene",
     hookSubtitle: "Nasadenie do 7 dní • oprávnenie §22 / §23",
@@ -279,8 +279,8 @@ export const SERVICE_DATA: Record<string, ServiceData> = {
       "Revízna správa s platnosťou po celom Slovensku"
     ],
     gallery: [
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1581090700227-1e37b190418e?w=1200&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1751486289947-4f5f5961b3aa?w=1200&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1754620906571-9ba64bd3ffb4?w=1200&q=80&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1200&q=80&auto=format&fit=crop"
     ],
     faq: [

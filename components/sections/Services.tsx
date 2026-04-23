@@ -22,13 +22,13 @@ const ICONS = {
 
 const IMAGES: Record<string, string> = {
   fotovoltika:
-    "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1200&q=80&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1655300256335-beef51a914fe?w=1200&q=80&auto=format&fit=crop",
   klimatizacie:
-    "https://images.unsplash.com/photo-1631545308456-1e3cc78eb37d?w=1200&q=80&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1766788466565-768128d89ce4?w=1200&q=80&auto=format&fit=crop",
   "kamerove-systemy":
-    "https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=1200&q=80&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1543963233-c815c054b782?w=1200&q=80&auto=format&fit=crop",
   elektroinstalacie:
-    "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=1200&q=80&auto=format&fit=crop"
+    "https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=1200&q=80&auto=format&fit=crop"
 };
 
 const DETAILS: Record<string, string[]> = {
