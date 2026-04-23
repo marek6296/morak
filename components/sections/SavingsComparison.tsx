@@ -45,9 +45,12 @@ const CARDS = [
   },
 ];
 
-function CostBar({ percent, color, inView }: { percent: number; color: string; inView: boolean }) {
+// CostBar manages its own inView — no prop drilling, no timing conflict
+function CostBar({ percent, color }: { percent: number; color: string }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const inView = useInView(ref, { once: true, margin: "-5%" });
   return (
-    <div className="h-2 w-full overflow-hidden rounded-full bg-ink-900/8">
+    <div ref={ref} className="h-2 w-full overflow-hidden rounded-full bg-ink-900/8">
       <motion.div
         className={`h-full rounded-full ${color}`}
         initial={{ width: 0 }}
@@ -59,9 +62,6 @@ function CostBar({ percent, color, inView }: { percent: number; color: string; i
 }
 
 export default function SavingsComparison() {
-  const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-10%" });
-
   return (
     <section className="pt-14 pb-10 md:pt-20 md:pb-12 lg:pt-24 lg:pb-14 bg-ink-50/60">
       <div className="container-lg">
@@ -88,7 +88,7 @@ export default function SavingsComparison() {
         </motion.div>
 
         {/* Cards */}
-        <div ref={ref} className="mt-10 grid gap-5 md:grid-cols-3">
+        <div className="mt-10 grid gap-5 md:grid-cols-3">
           {CARDS.map((card, i) => (
             <motion.div
               key={card.title}
@@ -126,13 +126,13 @@ export default function SavingsComparison() {
                   <span>Ročné náklady na elektrinu</span>
                   <span className="tabular-nums">{card.barPercent.toFixed(0)} %</span>
                 </div>
-                <CostBar percent={card.barPercent} color={card.barColor} inView={inView} />
+                <CostBar percent={card.barPercent} color={card.barColor} />
               </div>
 
               {/* Cost number */}
               <div className="mt-5 flex items-baseline gap-1.5">
                 <span className={`font-display text-4xl font-bold tabular-nums ${card.textColor}`}>
-                  {inView ? <CountUp to={card.cost} suffix=" €" duration={1.4} /> : "–"}
+                  <CountUp to={card.cost} suffix=" €" duration={1.4} />
                 </span>
                 <span className="text-sm text-ink-400">/ rok</span>
               </div>
