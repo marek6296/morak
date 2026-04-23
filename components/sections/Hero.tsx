@@ -116,8 +116,6 @@ export default function Hero() {
 
       {/* ── DESKTOP HERO (lg+) ── */}
       <div className="hidden lg:block pt-0 md:pt-2">
-        <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-[720px] bg-radial-fade" />
-
         <div className="container-lg relative">
           <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
 
