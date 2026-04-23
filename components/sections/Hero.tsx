@@ -115,7 +115,7 @@ export default function Hero() {
       </div>
 
       {/* ── DESKTOP HERO (lg+) ── */}
-      <div className="hidden lg:block pt-0 md:pt-2">
+      <div className="hidden lg:block pt-0 md:pt-2 pb-4">
         <div className="container-lg relative">
           <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
 
@@ -203,19 +203,6 @@ export default function Hero() {
                 </div>
               </motion.div>
 
-              {/* Floating stat — outside bottom-left corner of card */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.9, delay: 0.55 }}
-                className="absolute -bottom-4 -left-4 z-10 rounded-2xl border border-ink-900/10 bg-white p-4 shadow-lift"
-              >
-                <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-ink-400">
-                  Dokončených projektov
-                </p>
-                <p className="mt-1 font-display text-3xl font-semibold text-ink-900">103+</p>
-              </motion.div>
-
               {/* Illustration — no wrapper, white blends with page */}
               <Image
                 src="/images/hero-pc.png"
@@ -230,7 +217,7 @@ export default function Hero() {
           </div>
 
           {/* Logo strip */}
-          <div className="mt-12 border-t border-ink-900/10 pt-6">
+          <div className="mt-6 border-t border-ink-900/10 pt-6">
             <p className="text-center text-xs font-semibold uppercase tracking-[0.2em] text-ink-400">
               Certifikácie, partneri a výrobcovia
             </p>
