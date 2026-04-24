@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
-      <section className="relative overflow-hidden pt-5 md:pt-20">
+      <section className="relative overflow-hidden pt-4 md:pt-10">
         <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-[520px] bg-radial-fade" />
         <div className="container-lg relative">
           <Reveal>
@@ -29,7 +29,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="py-8 md:py-10">
         <div className="container-lg grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-4">
             <Reveal>
