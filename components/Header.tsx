@@ -57,7 +57,7 @@ export default function Header() {
           </nav>
 
           <div className="hidden items-center gap-3 lg:flex">
-            <Link href="/kontakt" className="btn-primary !py-2.5 !px-5 !text-[13px]">
+            <Link href="/kontakt" className="btn-nav">
               Cenová ponuka
               <ArrowRightIcon size={16} />
             </Link>

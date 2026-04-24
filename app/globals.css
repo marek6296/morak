@@ -100,6 +100,39 @@ body {
     @apply inline-flex items-center gap-2 rounded-full bg-ink-900 px-6 py-3.5 text-sm font-semibold tracking-wide text-white transition-all duration-300 hover:bg-ink-700 active:scale-[0.98];
   }
 
+  .btn-nav {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 12px;
+    padding: 10px 20px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    background: #7FCC1F;
+    color: #0B1220;
+    border: 2px solid #7FCC1F;
+    cursor: pointer;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.42s ease, transform 0.15s ease;
+  }
+  .btn-nav::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: #0B1220;
+    transform: translateX(105%);
+    transition: transform 0.42s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: -1;
+  }
+  .btn-nav:hover { color: #fff; }
+  .btn-nav:hover::before { transform: translateX(0); }
+  .btn-nav:active { transform: scale(0.97); }
+
   .eyebrow {
     @apply inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-brand-700;
   }
