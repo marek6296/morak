@@ -32,6 +32,7 @@ body {
 
   .btn-primary {
     position: relative;
+    isolation: isolate;
     overflow: hidden;
     display: inline-flex;
     align-items: center;
@@ -47,7 +48,7 @@ body {
     cursor: pointer;
     text-decoration: none;
     white-space: nowrap;
-    transition: color 0.35s ease, transform 0.15s ease;
+    transition: color 0.42s ease, transform 0.15s ease;
   }
   .btn-primary::before {
     content: '';
@@ -56,15 +57,15 @@ body {
     background: #7FCC1F;
     transform: translateX(-105%);
     transition: transform 0.42s cubic-bezier(0.4, 0, 0.2, 1);
-    z-index: 0;
+    z-index: -1;
   }
   .btn-primary:hover { color: #0B1220; }
   .btn-primary:hover::before { transform: translateX(0); }
   .btn-primary:active { transform: scale(0.97); }
-  .btn-primary > * { position: relative; z-index: 1; }
 
   .btn-ghost {
     position: relative;
+    isolation: isolate;
     overflow: hidden;
     display: inline-flex;
     align-items: center;
@@ -80,7 +81,7 @@ body {
     cursor: pointer;
     text-decoration: none;
     white-space: nowrap;
-    transition: color 0.35s ease, transform 0.15s ease;
+    transition: color 0.42s ease, transform 0.15s ease;
   }
   .btn-ghost::before {
     content: '';
@@ -89,12 +90,11 @@ body {
     background: #7FCC1F;
     transform: translateX(-105%);
     transition: transform 0.42s cubic-bezier(0.4, 0, 0.2, 1);
-    z-index: 0;
+    z-index: -1;
   }
   .btn-ghost:hover { color: #0B1220; }
   .btn-ghost:hover::before { transform: translateX(0); }
   .btn-ghost:active { transform: scale(0.97); }
-  .btn-ghost > * { position: relative; z-index: 1; }
 
   .btn-dark {
     @apply inline-flex items-center gap-2 rounded-full bg-ink-900 px-6 py-3.5 text-sm font-semibold tracking-wide text-white transition-all duration-300 hover:bg-ink-700 active:scale-[0.98];
