@@ -125,7 +125,7 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 26 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-                className="text-display-lg h-display text-balance"
+                className="h-display text-balance" style={{ fontSize: "clamp(2.2rem, 4.2vw, 3.6rem)", lineHeight: 1.1, letterSpacing: "-0.02em" }}
               >
                 Elektrina, ktorú si vyrábate sami.{" "}
                 <span className="relative inline-block">
