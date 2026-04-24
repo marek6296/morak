@@ -3,6 +3,7 @@ import { Space_Grotesk, Inter_Tight } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ChatBot from "@/components/ChatBot";
 
 const display = Space_Grotesk({
   subsets: ["latin", "latin-ext"],
@@ -62,6 +63,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         <main>{children}</main>
         <Footer />
+        <ChatBot />
       </body>
     </html>
   );
