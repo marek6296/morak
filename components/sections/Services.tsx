@@ -98,11 +98,6 @@ export default function Services() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-ink-900/55 via-ink-900/10 to-transparent" />
 
-                    {/* Icon badge */}
-                    <div className="absolute left-6 top-6 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-white/95 text-ink-900 shadow-lift backdrop-blur">
-                      <Icon size={24} />
-                    </div>
-
                     {/* Arrow indicator */}
                     <span className="absolute right-6 top-6 inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/30 bg-white/10 text-white backdrop-blur transition-all duration-500 group-hover:bg-brand group-hover:text-ink-900 group-hover:border-brand">
                       <ArrowUpRightIcon size={18} />
