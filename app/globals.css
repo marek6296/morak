@@ -42,12 +42,14 @@ body {
     font-size: 14px;
     font-weight: 700;
     letter-spacing: 0.01em;
+    line-height: 1;
     background: #0B1220;
     color: #fff;
-    border: 2px solid #0B1220;
+    border: 2px solid transparent;
     cursor: pointer;
     text-decoration: none;
     white-space: nowrap;
+    transform: translateZ(0);
     transition: transform 0.15s ease;
   }
   .btn-primary::before {
@@ -57,10 +59,11 @@ body {
     background: #7FCC1F;
     transform: translateX(-105%);
     transition: transform 0.42s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
     z-index: -1;
   }
   .btn-primary:hover::before { transform: translateX(0); }
-  .btn-primary:active { transform: scale(0.97); }
+  .btn-primary:active { transform: scale(0.97) translateZ(0); }
 
   .btn-ghost {
     position: relative;
@@ -74,12 +77,14 @@ body {
     font-size: 14px;
     font-weight: 700;
     letter-spacing: 0.01em;
+    line-height: 1;
     background: transparent;
     color: #0B1220;
     border: 2px solid #7FCC1F;
     cursor: pointer;
     text-decoration: none;
     white-space: nowrap;
+    transform: translateZ(0);
     transition: transform 0.15s ease;
   }
   .btn-ghost::before {
@@ -89,10 +94,11 @@ body {
     background: #7FCC1F;
     transform: translateX(-105%);
     transition: transform 0.42s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
     z-index: -1;
   }
   .btn-ghost:hover::before { transform: translateX(0); }
-  .btn-ghost:active { transform: scale(0.97); }
+  .btn-ghost:active { transform: scale(0.97) translateZ(0); }
 
   .btn-dark {
     @apply inline-flex items-center gap-2 rounded-full bg-ink-900 px-6 py-3.5 text-sm font-semibold tracking-wide text-white transition-all duration-300 hover:bg-ink-700 active:scale-[0.98];
@@ -110,12 +116,14 @@ body {
     font-size: 13px;
     font-weight: 700;
     letter-spacing: 0.01em;
+    line-height: 1;
     background: #7FCC1F;
     color: #fff;
-    border: 2px solid #7FCC1F;
+    border: 2px solid transparent;
     cursor: pointer;
     text-decoration: none;
     white-space: nowrap;
+    transform: translateZ(0);
     transition: transform 0.15s ease;
   }
   .btn-nav::before {
@@ -125,6 +133,7 @@ body {
     background: #0B1220;
     transform: translateX(105%);
     transition: transform 0.42s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
     z-index: -1;
   }
   .btn-nav:hover::before { transform: translateX(0); }
