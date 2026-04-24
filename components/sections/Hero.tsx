@@ -22,11 +22,12 @@ const BRANDS = [
 
 function SealBadge({ size = 84, uid = "a" }: { size?: number; uid?: string }) {
   const gId = `sg-${uid}`;
-  const teeth = 20;
+  // 28 jemných zubov — plynulejší okraj pečate
+  const teeth = 28;
   const pts: string[] = [];
   for (let i = 0; i < teeth * 2; i++) {
     const a = (i * Math.PI) / teeth - Math.PI / 2;
-    const r = i % 2 === 0 ? 48 : 41;
+    const r = i % 2 === 0 ? 48 : 43;
     pts.push(`${(50 + r * Math.cos(a)).toFixed(2)},${(50 + r * Math.sin(a)).toFixed(2)}`);
   }
   const gear = `M${pts.join("L")}Z`;
@@ -34,30 +35,60 @@ function SealBadge({ size = 84, uid = "a" }: { size?: number; uid?: string }) {
     <svg width={size} height={size} viewBox="0 0 100 100" aria-hidden xmlns="http://www.w3.org/2000/svg">
       <defs>
         <linearGradient id={gId} x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stopColor="#FAD961" />
-          <stop offset="55%" stopColor="#C98A1C" />
-          <stop offset="100%" stopColor="#7A4E0A" />
+          <stop offset="0%"  stopColor="#F0D060" />
+          <stop offset="50%" stopColor="#D4AF37" />
+          <stop offset="100%" stopColor="#8B6914" />
         </linearGradient>
       </defs>
-      {/* Notched gold outer ring */}
+
+      {/* Zúbkovaný zlatý okraj */}
       <path d={gear} fill={`url(#${gId})`} />
-      {/* Dark inner circle */}
-      <circle cx="50" cy="50" r="37" fill="#0E0900" />
-      {/* Decorative rings */}
-      <circle cx="50" cy="50" r="36" fill="none" stroke="#C98A1C" strokeWidth="0.9" />
-      <circle cx="50" cy="50" r="32" fill="none" stroke="#FAD961" strokeWidth="0.4" opacity="0.45" />
-      {/* Top stars */}
-      <text x="50" y="27" textAnchor="middle" fontSize="6" fill="#FAD961">★ ★ ★</text>
-      {/* CERTIFIKOVANÝ */}
-      <text x="50" y="38.5" textAnchor="middle" fontSize="5.8" fontWeight="700" fill="#FAD961" letterSpacing="0.5" fontFamily="system-ui,sans-serif">CERTIFIKOVANÝ</text>
-      {/* §22 / §23 */}
-      <text x="50" y="54" textAnchor="middle" fontSize="13.5" fontWeight="900" fill="#FAEAA0" fontFamily="system-ui,sans-serif">§22/§23</text>
-      {/* Separator */}
-      <line x1="29" y1="58" x2="71" y2="58" stroke="#C98A1C" strokeWidth="0.6" />
-      {/* INŠTALATÉR */}
-      <text x="50" y="67" textAnchor="middle" fontSize="5.5" fontWeight="700" fill="#C98A1C" letterSpacing="1" fontFamily="system-ui,sans-serif">INŠTALATÉR</text>
-      {/* Bottom dots */}
-      <text x="50" y="76" textAnchor="middle" fontSize="7" fill="#C98A1C">· · ·</text>
+
+      {/* Tmavý vnútorný kruh — navy/čierny */}
+      <circle cx="50" cy="50" r="38" fill="#1a1a2e" />
+
+      {/* Dekoratívne prstence */}
+      <circle cx="50" cy="50" r="37"   fill="none" stroke="#D4AF37" strokeWidth="1"   />
+      <circle cx="50" cy="50" r="33.5" fill="none" stroke="#D4AF37" strokeWidth="0.4" opacity="0.5" />
+
+      {/* Hviezdičky hore */}
+      <text x="50" y="24" textAnchor="middle" fontSize="5" fill="#D4AF37">★  ★  ★</text>
+
+      {/* CERTIFIKOVANÁ */}
+      <text x="50" y="33" textAnchor="middle" fontSize="5.5" fontWeight="700"
+            fill="#D4AF37" letterSpacing="0.6" fontFamily="system-ui,sans-serif">
+        CERTIFIKOVANÁ
+      </text>
+
+      {/* Horný oddeľovač */}
+      <line x1="26" y1="36.5" x2="74" y2="36.5" stroke="#D4AF37" strokeWidth="0.5" opacity="0.7" />
+
+      {/* Veľká "5" */}
+      <text x="50" y="56" textAnchor="middle" fontSize="20" fontWeight="900"
+            fill="#F0D060" fontFamily="system-ui,sans-serif">
+        5
+      </text>
+
+      {/* ROKOV */}
+      <text x="50" y="65" textAnchor="middle" fontSize="7.5" fontWeight="700"
+            fill="#D4AF37" letterSpacing="1.5" fontFamily="system-ui,sans-serif">
+        ROKOV
+      </text>
+
+      {/* ZÁRUKA */}
+      <text x="50" y="73.5" textAnchor="middle" fontSize="6.5" fontWeight="600"
+            fill="#D4AF37" letterSpacing="1" fontFamily="system-ui,sans-serif">
+        ZÁRUKA
+      </text>
+
+      {/* Dolný oddeľovač */}
+      <line x1="26" y1="76.5" x2="74" y2="76.5" stroke="#D4AF37" strokeWidth="0.5" opacity="0.7" />
+
+      {/* MORAK */}
+      <text x="50" y="83" textAnchor="middle" fontSize="5.5" fontWeight="700"
+            fill="#D4AF37" letterSpacing="2" fontFamily="system-ui,sans-serif">
+        ✦ MORAK ✦
+      </text>
     </svg>
   );
 }
@@ -106,10 +137,9 @@ export default function Hero() {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.45, ease: [0.22, 1, 0.36, 1] }}
             className="absolute right-4 top-4"
+            style={{ filter: "drop-shadow(0 6px 18px rgba(212,175,55,0.55))" }}
           >
-            <div className="rounded-full shadow-[0_6px_22px_rgba(201,138,28,0.5)]">
-              <SealBadge size={78} uid="mob" />
-            </div>
+            <SealBadge size={84} uid="mob" />
           </motion.div>
 
           {/* Text + CTA */}
@@ -283,10 +313,9 @@ export default function Hero() {
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
                 className="absolute bottom-6 right-2 z-10"
+                style={{ filter: "drop-shadow(0 8px 22px rgba(212,175,55,0.6))" }}
               >
-                <div className="rounded-full shadow-[0_8px_28px_rgba(201,138,28,0.5)]">
-                  <SealBadge size={92} uid="dsk" />
-                </div>
+                <SealBadge size={96} uid="dsk" />
               </motion.div>
 
               <Image
