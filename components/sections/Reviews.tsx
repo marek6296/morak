@@ -9,7 +9,7 @@ const REVIEWS = [
     city: "Prešov",
     service: "Fotovoltika 9 kWp",
     rating: 5,
-    text: "nehanbím sa povedať že som bol poriadny skeptik a manželka ma tlačila do toho skoro 2 roky. No teraz mi každý mesiac pripomína že mala pravdu 😄 Účet nám klesol z 230 na 38€, v lete sme mali dokonca preplatky. Chlapci to dali dohromady za 2 dni a po sebe upratali.",
+    text: "nehanbim sa povedat ze som bol poriadny skeptik a manzelka ma tlacila do toho skoro 2 roky. no teraz mi kazdy mesiac pripomina ze mala pravdu 😄 ucet nam klesol z 230 na 38 eur v lete sme mali dokonca preplatky. chlapci to dali dohromady za 2 dni a po sebe upratali",
     initials: "JK"
   },
   {
@@ -17,7 +17,7 @@ const REVIEWS = [
     city: "Košice",
     service: "Klimatizácia multi-split",
     rating: 5,
-    text: "Klimatizáciu sme si dávali prvýkrát a nevedeli sme čo očakávať. Montér prišiel načas, na prácu bol šikovný a vysvetlil nám ovládanie. Minulé leto som nemohla spať od horúčavy, tento rok je pohoda aj v 35 stupňoch. Akurát nás trochu prekvapila konečná cena ale keď to takto funguje tak sa to oplatilo.",
+    text: "Klimatizaciu sme si davali prvykrat a nevedeli sme co cakat. Monter prisiel nacas bol sikovy a vysvetlil nam ovladanie. Minule leto som nemohla spat od horcavy tento rok je pohoda aj v 35 stupnoch. Akurat nas trochu prekvapila konecna cena ale ked to funguje tak sa oplatilo",
     initials: "MH"
   },
   {
@@ -25,7 +25,7 @@ const REVIEWS = [
     city: "Poprad",
     service: "Fotovoltika + batéria",
     rating: 5,
-    text: "V januári som platil 290€ za elekriku, teraz je to vo väčšine mesiacov nula alebo skoro nula. Sused riešil to isté s inou firmou a mal samé problémy so zárukou, ja som bol s MORAKom pohodár. Batéria sa zdala drahá ale bez nej by to v zime nestálo za toľko.",
+    text: "v januari som platil 290 eur za elektriku teraz je to vo vacsine mesiacov nula alebo skoro nula. sused riesil to iste s inou firmou a mal same problemy so zarukou ja som bol s morakom pohoda. bateria sa zdala draha ale bez nej by to v zime nestalo za tolko",
     initials: "MT"
   },
   {
@@ -33,7 +33,7 @@ const REVIEWS = [
     city: "Banská Bystrica",
     service: "Kamerový systém",
     rating: 4,
-    text: "kamery som riešila pre firemný sklad. Prišli, pozreli si to a do týždňa bolo hotovo. Appka na telefóne funguje fajn, vidím živý prenos aj keď som na druhom konci republiky 👍 Jediné čo by som vytkla je že na jeden email odpovedali dosť neskoro.",
+    text: "kamery som riesila pre firemny sklad. prisli pozreli si to a do tyzdna bolo hotovo. appka na telefone funguje fajn vidim zivy prenos aj ked som na druhom konci republiky 👍 jedine co by som vytkla je ze na jeden email odpovedali dost neskoro",
     initials: "ES"
   },
   {
@@ -41,7 +41,7 @@ const REVIEWS = [
     city: "Žilina",
     service: "Elektroinštalácia",
     rating: 5,
-    text: "Starý dom z 80-tych rokov, elektrika bola katastrofa. MORAK to celé prerobil, nový rozvádzač aj rozvody a pri tom objavili chybu v pôvodnej inštalácii o ktorej sme nevedeli vôbec nič — vraj mohlo byť nebezpečné. Práce trvali dlhšie ako pôvodne hovorili ale výsledok vidno. Chalani vedeli čo robia.",
+    text: "stary dom z 80-tych rokov elektrika bola katastrofa. morak to cele prerobil novy rozvadac aj rozvody a pritom objavili chybu v povodnej instalacii o ktorej sme nevedeli vobec nic. vraj mohlo byt nebezpecne. prace trvali dlhsie ako povodne hovorili ale vysledok vidno. chalani vedeli co robia",
     initials: "PN"
   },
   {
@@ -49,7 +49,7 @@ const REVIEWS = [
     city: "Trnava",
     service: "Fotovoltika + dotácia",
     rating: 5,
-    text: "S tou dotáciou Zelená domácnostiam som sa bála papirovania ale v realite som len podpísala čo mi predložili, oni to vybavili. Systém beží od apríla a faktúry sú smiešne nízke. Pred montážou bola komunikácia trochu pomalšia ale samotná inštalácia prebehla bez problémov. Celkovo som rada že sme to nakoniec spravili.",
+    text: "s tou dotaciou zelena domacnostiam som sa bala papirovania ale v realite som len podpisala co mi predlozili oni to vybavili. system bezi od aprila a faktury su smiesne nizke. pred montazou bola komunikacia trochu pomalsie ale samotna instalacia prebehla bez problemov. celkovo som rada ze sme to nakoniec spravili",
     initials: "ZB"
   }
 ];
