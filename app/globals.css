@@ -55,14 +55,13 @@ body {
   .btn-primary::before {
     content: '';
     position: absolute;
-    inset: 0;
+    inset: -1px;
     background: #7FCC1F;
     transform: translateX(-105%);
     transition: transform 0.42s cubic-bezier(0.4, 0, 0.2, 1);
     will-change: transform;
     z-index: -1;
   }
-  .btn-primary:hover { background: #7FCC1F; }
   .btn-primary:hover::before { transform: translateX(0); }
   .btn-primary:active { transform: scale(0.97) translateZ(0); }
 
