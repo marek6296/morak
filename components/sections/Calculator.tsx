@@ -28,7 +28,7 @@ export default function Calculator() {
               </p>
             </div>
 
-            <div className="rounded-3xl border border-ink-900/8 bg-white p-8 shadow-soft md:p-10">
+            <div className="rounded-3xl border border-ink-900/8 bg-white p-5 shadow-soft sm:p-8 md:p-10">
               {/* Slider */}
               <div className="mb-8">
                 <div className="flex items-center justify-between mb-3">
@@ -58,31 +58,24 @@ export default function Calculator() {
               </div>
 
               {/* Results */}
-              <div className="grid grid-cols-3 gap-4">
-                <div className="rounded-2xl bg-brand/10 p-5 text-center">
-                  <p className="font-display text-2xl font-bold text-brand-700 md:text-3xl">
-                    {savings.toLocaleString("sk")} €
-                  </p>
-                  <p className="mt-1 text-xs font-semibold uppercase tracking-[0.1em] text-ink-500">
-                    úspora / rok
-                  </p>
-                </div>
-                <div className="rounded-2xl bg-ink-50 p-5 text-center">
-                  <p className="font-display text-2xl font-bold text-ink-900 md:text-3xl">
-                    {payback} r.
-                  </p>
-                  <p className="mt-1 text-xs font-semibold uppercase tracking-[0.1em] text-ink-500">
-                    návratnosť
-                  </p>
-                </div>
-                <div className="rounded-2xl bg-ink-50 p-5 text-center">
-                  <p className="font-display text-2xl font-bold text-ink-900 md:text-3xl">
-                    ~{systemCost.toLocaleString("sk")} €
-                  </p>
-                  <p className="mt-1 text-xs font-semibold uppercase tracking-[0.1em] text-ink-500">
-                    odhad nákladov
-                  </p>
-                </div>
+              <div className="grid grid-cols-3 gap-2 sm:gap-4">
+                {[
+                  { value: `${savings.toLocaleString("sk")} €`, label: "Úspora / rok", accent: true },
+                  { value: `${payback} r.`,                      label: "Návratnosť",    accent: false },
+                  { value: `${systemCost.toLocaleString("sk")} €`, label: "Odhad nákladov", accent: false },
+                ].map((item) => (
+                  <div
+                    key={item.label}
+                    className="flex flex-col items-center justify-center rounded-2xl border border-ink-900/8 bg-ink-50 p-3 text-center sm:p-5"
+                  >
+                    <p className={`whitespace-nowrap font-display text-[15px] font-bold leading-tight sm:text-2xl md:text-3xl ${item.accent ? "text-brand-700" : "text-ink-900"}`}>
+                      {item.value}
+                    </p>
+                    <p className="mt-1.5 text-[9px] font-semibold uppercase leading-tight tracking-[0.08em] text-ink-500 sm:text-[11px] sm:tracking-[0.1em]">
+                      {item.label}
+                    </p>
+                  </div>
+                ))}
               </div>
 
               <p className="mt-4 text-center text-xs text-ink-400">
