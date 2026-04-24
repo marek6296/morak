@@ -61,7 +61,7 @@ export default function Hero() {
               transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
               className="flex flex-col gap-2.5"
             >
-              <h1 className="font-display text-[2.15rem] font-semibold leading-[1.12] tracking-tight text-ink-900">
+              <h1 className="font-display text-[2.6rem] font-semibold leading-[1.1] tracking-tight text-ink-900">
                 Elektrina, ktorú si vyrábate sami.
               </h1>
               <p className="text-[15px] leading-relaxed text-ink-600">
