@@ -31,11 +31,11 @@ body {
   }
 
   .btn-primary {
-    @apply inline-flex items-center gap-2 rounded-full bg-brand px-6 py-3.5 text-sm font-semibold tracking-wide text-ink-900 transition-all duration-300 hover:bg-brand-400 hover:shadow-[0_10px_30px_-10px_rgba(127,204,31,0.55)] active:scale-[0.98];
+    @apply inline-flex items-center gap-2.5 rounded-full bg-gradient-to-br from-[#96d926] to-brand px-7 py-[13px] text-[14px] font-bold tracking-[0.02em] text-ink-900 shadow-[0_4px_18px_-2px_rgba(127,204,31,0.5),0_1px_0_rgba(255,255,255,0.18)_inset] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_26px_-2px_rgba(127,204,31,0.65),0_1px_0_rgba(255,255,255,0.18)_inset] active:translate-y-0 active:scale-[0.97] active:shadow-[0_2px_8px_rgba(127,204,31,0.35)];
   }
 
   .btn-ghost {
-    @apply inline-flex items-center gap-2 rounded-full border border-brand bg-transparent px-6 py-3.5 text-sm font-semibold tracking-wide text-brand-700 transition-all duration-300 hover:bg-brand hover:text-ink-900 active:scale-[0.98];
+    @apply inline-flex items-center gap-2.5 rounded-full border-2 border-brand bg-transparent px-7 py-3 text-[14px] font-bold tracking-[0.02em] text-brand-700 transition-all duration-200 hover:bg-brand hover:text-ink-900 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97];
   }
 
   .btn-dark {
