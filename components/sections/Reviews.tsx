@@ -9,15 +9,15 @@ const REVIEWS = [
     city: "Prešov",
     service: "Fotovoltika 9 kWp",
     rating: 5,
-    text: "nehanbim sa povedat ze som bol poriadny skeptik a manzelka ma tlacila do toho skoro 2 roky. no teraz mi kazdy mesiac pripomina ze mala pravdu 😄 ucet nam klesol z 230 na 38 eur v lete sme mali dokonca preplatky. chlapci to dali dohromady za 2 dni a po sebe upratali",
+    text: "nehanbim sa povedat ze som bol 2 roky skeptik a manzelka ma tlacila do toho skoro kazdy mesiac. no a teraz mi pri kazdej faktúre pripomina ze mala pravdu 😄 ucet nam klesol z 230 na 38 eur, v lete sme mali dokonca preplatky. chlapci to dali dohromady za 2 dni a po sebe upratali",
     initials: "JK"
   },
   {
     name: "Mária Horváthová",
     city: "Košice",
     service: "Klimatizácia multi-split",
-    rating: 5,
-    text: "Klimatizaciu sme si davali prvykrat a nevedeli sme co cakat. Monter prisiel nacas bol sikovy a vysvetlil nam ovladanie. Minule leto som nemohla spat od horcavy tento rok je pohoda aj v 35 stupnoch. Akurat nas trochu prekvapila konecna cena ale ked to funguje tak sa oplatilo",
+    rating: 4,
+    text: "super klimatizacia drahsie ako som cakala ale v lete zachranila zivot 👍 montaz prebehla v pohode",
     initials: "MH"
   },
   {
@@ -25,7 +25,7 @@ const REVIEWS = [
     city: "Poprad",
     service: "Fotovoltika + batéria",
     rating: 5,
-    text: "v januari som platil 290 eur za elektriku teraz je to vo vacsine mesiacov nula alebo skoro nula. sused riesil to iste s inou firmou a mal same problemy so zarukou ja som bol s morakom pohoda. bateria sa zdala draha ale bez nej by to v zime nestalo za tolko",
+    text: "Veľmi spokojný s celou realizáciou. V januári som platil skoro 300 € za elektriku, väčšinu mesiacov teraz platím nulu alebo veľmi málo. Batéria sa zdala drahá investícia, no bez nej by to v zime nestálo za toľko. Sused mal s inou firmou samé problémy so zárukou, u mňa všetko bez komplikácií. Odporúčam.",
     initials: "MT"
   },
   {
@@ -33,7 +33,7 @@ const REVIEWS = [
     city: "Banská Bystrica",
     service: "Kamerový systém",
     rating: 4,
-    text: "kamery som riesila pre firemny sklad. prisli pozreli si to a do tyzdna bolo hotovo. appka na telefone funguje fajn vidim zivy prenos aj ked som na druhom konci republiky 👍 jedine co by som vytkla je ze na jeden email odpovedali dost neskoro",
+    text: "Kamery na firemný sklad fungujú dobre, appka tiež. Raz odpovedali na mail dosť neskoro, inak bez problémov.",
     initials: "ES"
   },
   {
@@ -41,15 +41,15 @@ const REVIEWS = [
     city: "Žilina",
     service: "Elektroinštalácia",
     rating: 5,
-    text: "stary dom z 80-tych rokov elektrika bola katastrofa. morak to cele prerobil novy rozvadac aj rozvody a pritom objavili chybu v povodnej instalacii o ktorej sme nevedeli vobec nic. vraj mohlo byt nebezpecne. prace trvali dlhsie ako povodne hovorili ale vysledok vidno. chalani vedeli co robia",
+    text: "Starý rodinný dom z 80-tych rokov, elektrika bola fakt v hroznom stave. MORAK to celé prerobil, nový rozvádzač aj rozvody, a pri práci objavili chybu v pôvodnej inštalácii o ktorej sme vôbec netušili — vraj mohlo byť nebezpečné. Práce trvali trochu dlhšie ako hovorili na začiatku ale výsledok je na 100%. Chalani fakt vedeli čo robia a vysvetlili nám každý krok.",
     initials: "PN"
   },
   {
     name: "Zuzana Blahová",
     city: "Trnava",
     service: "Fotovoltika + dotácia",
-    rating: 5,
-    text: "s tou dotaciou zelena domacnostiam som sa bala papirovania ale v realite som len podpisala co mi predlozili oni to vybavili. system bezi od aprila a faktury su smiesne nizke. pred montazou bola komunikacia trochu pomalsie ale samotna instalacia prebehla bez problemov. celkovo som rada ze sme to nakoniec spravili",
+    rating: 4,
+    text: "s dotaciou Zelena domacnostiam som sa bala ze bude kopec papirovania ale v realite som len podpisala co mi predlozili a oni to vybavili za mna. System bezi od aprila a faktury su este nizsie ako som cakala. Pred montazou bola komunikacia trochu pomalsia ale inak v poriadku, celkovo som rada ze sme to spravili.",
     initials: "ZB"
   }
 ];
