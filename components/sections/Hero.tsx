@@ -20,6 +20,48 @@ const BRANDS = [
   { name: "SMA", domain: "sma.de" },
 ];
 
+function SealBadge({ size = 84, uid = "a" }: { size?: number; uid?: string }) {
+  const gId = `sg-${uid}`;
+  const teeth = 20;
+  const pts: string[] = [];
+  for (let i = 0; i < teeth * 2; i++) {
+    const a = (i * Math.PI) / teeth - Math.PI / 2;
+    const r = i % 2 === 0 ? 48 : 41;
+    pts.push(`${(50 + r * Math.cos(a)).toFixed(2)},${(50 + r * Math.sin(a)).toFixed(2)}`);
+  }
+  const gear = `M${pts.join("L")}Z`;
+  return (
+    <svg width={size} height={size} viewBox="0 0 100 100" aria-hidden xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id={gId} x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stopColor="#FAD961" />
+          <stop offset="55%" stopColor="#C98A1C" />
+          <stop offset="100%" stopColor="#7A4E0A" />
+        </linearGradient>
+      </defs>
+      {/* Notched gold outer ring */}
+      <path d={gear} fill={`url(#${gId})`} />
+      {/* Dark inner circle */}
+      <circle cx="50" cy="50" r="37" fill="#0E0900" />
+      {/* Decorative rings */}
+      <circle cx="50" cy="50" r="36" fill="none" stroke="#C98A1C" strokeWidth="0.9" />
+      <circle cx="50" cy="50" r="32" fill="none" stroke="#FAD961" strokeWidth="0.4" opacity="0.45" />
+      {/* Top stars */}
+      <text x="50" y="27" textAnchor="middle" fontSize="6" fill="#FAD961">★ ★ ★</text>
+      {/* CERTIFIKOVANÝ */}
+      <text x="50" y="38.5" textAnchor="middle" fontSize="5.8" fontWeight="700" fill="#FAD961" letterSpacing="0.5" fontFamily="system-ui,sans-serif">CERTIFIKOVANÝ</text>
+      {/* §22 / §23 */}
+      <text x="50" y="54" textAnchor="middle" fontSize="13.5" fontWeight="900" fill="#FAEAA0" fontFamily="system-ui,sans-serif">§22/§23</text>
+      {/* Separator */}
+      <line x1="29" y1="58" x2="71" y2="58" stroke="#C98A1C" strokeWidth="0.6" />
+      {/* INŠTALATÉR */}
+      <text x="50" y="67" textAnchor="middle" fontSize="5.5" fontWeight="700" fill="#C98A1C" letterSpacing="1" fontFamily="system-ui,sans-serif">INŠTALATÉR</text>
+      {/* Bottom dots */}
+      <text x="50" y="76" textAnchor="middle" fontSize="7" fill="#C98A1C">· · ·</text>
+    </svg>
+  );
+}
+
 export default function Hero() {
   return (
     <section className="relative" style={{ backgroundColor: "#fafafa" }}>
@@ -55,6 +97,18 @@ export default function Hero() {
                 7 500 €
               </p>
               <p className="mt-0.5 text-[11px] font-semibold text-green-100">Zelená domácnostiam III</p>
+            </div>
+          </motion.div>
+
+          {/* Certification seal — top right */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.85, y: -10 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.45, ease: [0.22, 1, 0.36, 1] }}
+            className="absolute right-4 top-4"
+          >
+            <div className="rounded-full shadow-[0_6px_22px_rgba(201,138,28,0.5)]">
+              <SealBadge size={78} uid="mob" />
             </div>
           </motion.div>
 
@@ -220,6 +274,18 @@ export default function Hero() {
                     7 500 €
                   </p>
                   <p className="mt-0.5 text-[11px] font-semibold text-green-100">Zelená domácnostiam III</p>
+                </div>
+              </motion.div>
+
+              {/* Certification seal — bottom right */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.85, y: 10 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                className="absolute bottom-6 right-2 z-10"
+              >
+                <div className="rounded-full shadow-[0_8px_28px_rgba(201,138,28,0.5)]">
+                  <SealBadge size={92} uid="dsk" />
                 </div>
               </motion.div>
 
