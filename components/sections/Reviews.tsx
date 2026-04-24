@@ -7,9 +7,9 @@ const REVIEWS = [
   {
     name: "Ján Kováč",
     city: "Prešov",
-    service: "Fotovoltika 9,8 kWp",
+    service: "Fotovoltika 9 kWp",
     rating: 5,
-    text: "Panely nám namontovali za 3 dni, aj keď sa počasie nevydarilo. Manželka bola prekvapená, ako rýchlo to celé prebehlo. Teraz platíme za elektrinu asi štvrtinu toho čo predtým.",
+    text: "nehanbím sa povedať že som bol poriadny skeptik a manželka ma tlačila do toho skoro 2 roky. No teraz mi každý mesiac pripomína že mala pravdu 😄 Účet nám klesol z 230 na 38€, v lete sme mali dokonca preplatky. Chlapci to dali dohromady za 2 dni a po sebe upratali.",
     initials: "JK"
   },
   {
@@ -17,7 +17,7 @@ const REVIEWS = [
     city: "Košice",
     service: "Klimatizácia multi-split",
     rating: 5,
-    text: "Dali sme si klimatizáciu do obývačky aj spálne. Chlapci prišli načas, pracovali čisto a nechali podpísaný protokol. Ani raz sme nemuseli nič reklamovať — všetko funguje.",
+    text: "Klimatizáciu sme si dávali prvýkrát a nevedeli sme čo očakávať. Montér prišiel načas, na prácu bol šikovný a vysvetlil nám ovládanie. Minulé leto som nemohla spať od horúčavy, tento rok je pohoda aj v 35 stupňoch. Akurát nás trochu prekvapila konečná cena ale keď to takto funguje tak sa to oplatilo.",
     initials: "MH"
   },
   {
@@ -25,15 +25,15 @@ const REVIEWS = [
     city: "Poprad",
     service: "Fotovoltika + batéria",
     rating: 5,
-    text: "Bál som sa, či systém zvládne zimu v horách. Zvládol perfektne. Návratnosť vypočítali na cca 7 rokov, my sme spokojní už teraz — prvý mesiac sme zaplatili elektrickej 12 eur.",
+    text: "V januári som platil 290€ za elekriku, teraz je to vo väčšine mesiacov nula alebo skoro nula. Sused riešil to isté s inou firmou a mal samé problémy so zárukou, ja som bol s MORAKom pohodár. Batéria sa zdala drahá ale bez nej by to v zime nestálo za toľko.",
     initials: "MT"
   },
   {
     name: "Eva Szabóová",
     city: "Banská Bystrica",
     service: "Kamerový systém",
-    rating: 5,
-    text: "Chceli sme kamery na firemný sklad. MORAK prišiel obzrieť miesto, na druhý deň mi poslali cenovú ponuku. Cena bola férová a všetko ovládam cez mobil odkiaľkoľvek.",
+    rating: 4,
+    text: "kamery som riešila pre firemný sklad. Prišli, pozreli si to a do týždňa bolo hotovo. Appka na telefóne funguje fajn, vidím živý prenos aj keď som na druhom konci republiky 👍 Jediné čo by som vytkla je že na jeden email odpovedali dosť neskoro.",
     initials: "ES"
   },
   {
@@ -41,7 +41,7 @@ const REVIEWS = [
     city: "Žilina",
     service: "Elektroinštalácia",
     rating: 5,
-    text: "Rekonštrukcia elektriky v dome zo 70-tych rokov — bolo toho dosť. MORAK to zvládol bez problémov a dokonca objavili chybu v starom rozvode, o ktorej sme ani nevedeli.",
+    text: "Starý dom z 80-tych rokov, elektrika bola katastrofa. MORAK to celé prerobil, nový rozvádzač aj rozvody a pri tom objavili chybu v pôvodnej inštalácii o ktorej sme nevedeli vôbec nič — vraj mohlo byť nebezpečné. Práce trvali dlhšie ako pôvodne hovorili ale výsledok vidno. Chalani vedeli čo robia.",
     initials: "PN"
   },
   {
@@ -49,7 +49,7 @@ const REVIEWS = [
     city: "Trnava",
     service: "Fotovoltika + dotácia",
     rating: 5,
-    text: "Bála som sa papierovanie okolo dotácie, ale pomohli so všetkým — stačilo podpísať. Montáž hotová za 2 dni, dotácia schválená o 3 týždne. Nemám čo vytknúť.",
+    text: "S tou dotáciou Zelená domácnostiam som sa bála papirovania ale v realite som len podpísala čo mi predložili, oni to vybavili. Systém beží od apríla a faktúry sú smiešne nízke. Pred montážou bola komunikácia trochu pomalšia ale samotná inštalácia prebehla bez problémov. Celkovo som rada že sme to nakoniec spravili.",
     initials: "ZB"
   }
 ];
