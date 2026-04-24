@@ -19,7 +19,7 @@ export default function Hero() {
 
       {/* ── MOBILE HERO (< lg) — illustration as background, content anchored to bottom ── */}
       <div className="lg:hidden">
-        <div className="relative h-[82svh] min-h-[540px] bg-white">
+        <div className="relative bg-white" style={{ height: "calc(100svh - 64px)", minHeight: "540px" }}>
 
           {/* Illustration — full bleed, object-contain so nothing crops */}
           <Image
@@ -115,8 +115,8 @@ export default function Hero() {
       </div>
 
       {/* ── DESKTOP HERO (lg+) ── */}
-      <div className="hidden lg:block pt-0 md:pt-2 pb-4">
-        <div className="container-lg relative">
+      <div className="hidden lg:flex flex-col" style={{ minHeight: "calc(100svh - 64px)" }}>
+        <div className="container-lg relative flex-1 flex flex-col justify-center py-6">
           <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
 
             {/* LEFT — text */}
