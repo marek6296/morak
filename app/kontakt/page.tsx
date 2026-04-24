@@ -13,23 +13,7 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
-      <section className="relative overflow-hidden pt-4 md:pt-10">
-        <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-[520px] bg-radial-fade" />
-        <div className="container-lg relative">
-          <Reveal>
-            <span className="eyebrow">Kontakt</span>
-            <h1 className="mt-5 max-w-3xl text-display-xl h-display text-balance">
-              Radi si vypočujeme, čo plánujete.
-            </h1>
-            <p className="mt-6 max-w-xl text-lg leading-relaxed text-ink-500 text-balance">
-              Vyplňte formulár alebo nám priamo zavolajte. Do 24 hodín vám odpovie technik, nie
-              call-centrum. Konzultácia a cenová ponuka sú nezáväzné a zdarma.
-            </p>
-          </Reveal>
-        </div>
-      </section>
-
-      <section className="py-8 md:py-10">
+      <section className="py-10 md:py-16">
         <div className="container-lg grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-4">
             <Reveal>
