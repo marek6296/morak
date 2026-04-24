@@ -64,7 +64,7 @@ export default function Hero() {
               <h1 className="font-display text-[2.6rem] font-semibold leading-[1.1] tracking-tight text-ink-900">
                 Elektrina, ktorú si vyrábate sami.
               </h1>
-              <p className="text-[15px] leading-relaxed text-ink-600">
+              <p className="text-[17px] leading-relaxed text-ink-600">
                 Znížte účet za elektrinu až o&nbsp;80 %. Certifikovaný tím, päťročná záruka.
               </p>
               <Link
