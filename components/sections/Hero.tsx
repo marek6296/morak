@@ -125,7 +125,7 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 26 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-                className="text-display-xl h-display text-balance"
+                className="text-display-lg h-display text-balance"
               >
                 Elektrina, ktorú si vyrábate sami.{" "}
                 <span className="relative inline-block">
@@ -138,7 +138,7 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.9, delay: 0.16, ease: [0.22, 1, 0.36, 1] }}
-                className="mt-4 max-w-lg text-lg leading-relaxed text-ink-500 text-balance"
+                className="mt-4 max-w-lg text-base leading-relaxed text-ink-500 text-balance"
               >
                 Znížte účet za elektrinu až o 80 % a štátnu dotáciu vybavíme za vás.
                 Fotovoltika, klimatizácie, kamerové systémy a elektroinštalácie —
