@@ -26,7 +26,7 @@ export default function ContactCTA() {
             <Reveal delay={0.1}>
               <ul className="mt-10 space-y-5">
                 <li className="flex items-start gap-4">
-                  <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-brand/15 text-brand">
+                  <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-white/10 text-white/70">
                     <PhoneIcon size={20} />
                   </span>
                   <div>
@@ -37,7 +37,7 @@ export default function ContactCTA() {
                   </div>
                 </li>
                 <li className="flex items-start gap-4">
-                  <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-brand/15 text-brand">
+                  <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-white/10 text-white/70">
                     <MailIcon size={20} />
                   </span>
                   <div>
@@ -48,7 +48,7 @@ export default function ContactCTA() {
                   </div>
                 </li>
                 <li className="flex items-start gap-4">
-                  <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-brand/15 text-brand">
+                  <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-white/10 text-white/70">
                     <PinIcon size={20} />
                   </span>
                   <div>
@@ -57,7 +57,7 @@ export default function ContactCTA() {
                   </div>
                 </li>
                 <li className="flex items-start gap-4">
-                  <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-brand/15 text-brand">
+                  <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-white/10 text-white/70">
                     <ClockIcon size={20} />
                   </span>
                   <div>

@@ -67,8 +67,7 @@ export default function Services() {
           </Reveal>
           <Reveal delay={0.1}>
             <p className="max-w-md text-base leading-relaxed text-ink-500">
-              Navrhujeme a realizujeme technológie, ktoré znižujú náklady na energie, zvyšujú
-              komfort a bezpečnosť vašej nehnuteľnosti. Všetko pod jednou strechou.
+              Všetko pod jednou strechou — od návrhu po odovzdanie.
             </p>
           </Reveal>
         </div>
@@ -120,7 +119,7 @@ export default function Services() {
                     <ul className="mt-6 space-y-2 border-t border-ink-900/8 pt-5">
                       {DETAILS[s.slug].map((d) => (
                         <li key={d} className="flex items-start gap-2.5 text-sm text-ink-700">
-                          <span className="mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-brand" />
+                          <span className="mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-ink-300" />
                           <span>{d}</span>
                         </li>
                       ))}

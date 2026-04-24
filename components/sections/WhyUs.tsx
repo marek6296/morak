@@ -49,9 +49,7 @@ export default function WhyUs() {
                 Projekty, ktoré fungujú aj po desiatich rokoch.
               </h2>
               <p className="mt-6 max-w-md text-[17px] leading-relaxed text-ink-300">
-                MORAK vznikol z presvedčenia, že kvalitná technológia zaslúži kvalitnú realizáciu.
-                Staviame na presnosti, dokumentácii a dlhodobom vzťahu s klientom — nie na cenovom
-                dumpingu.
+                Staviame na presnosti a dlhodobom vzťahu s klientom — nie na cenovom dumpingu.
               </p>
             </Reveal>
 
@@ -77,7 +75,7 @@ export default function WhyUs() {
                 return (
                   <Reveal key={r.title} delay={i * 0.08}>
                     <div className="group h-full rounded-3xl border border-white/10 bg-white/5 p-7 backdrop-blur-sm transition-all duration-500 hover:border-brand/40 hover:bg-white/10">
-                      <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-brand/20 text-brand transition-colors group-hover:bg-brand group-hover:text-ink-900">
+                      <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10 text-white/70 transition-colors group-hover:bg-brand group-hover:text-ink-900">
                         <Icon size={24} />
                       </div>
                       <h3 className="mt-6 font-display text-xl font-semibold tracking-tight text-white">
