@@ -62,6 +62,7 @@ body {
     will-change: transform;
     z-index: -1;
   }
+  .btn-primary:hover { background: #7FCC1F; }
   .btn-primary:hover::before { transform: translateX(0); }
   .btn-primary:active { transform: scale(0.97) translateZ(0); }
 
