@@ -18,31 +18,8 @@ export default function ServicePage({ data }: { data: ServiceData }) {
 
   return (
     <>
-      {/* Hook banner */}
-      <section className="relative bg-brand/10 border-b border-brand/20">
-        <div className="container-lg flex flex-col items-start gap-3 py-5 md:flex-row md:items-center md:justify-between">
-          <div className="flex items-start gap-3 md:items-center">
-            <span className="mt-0.5 inline-flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-brand text-ink-900 md:mt-0">
-              <Icon size={18} />
-            </span>
-            <p className="text-sm leading-snug text-ink-900 md:text-[15px]">
-              <span className="font-semibold">{data.hookTitle}</span>
-              <span className="mx-2 text-ink-400">•</span>
-              <span className="text-ink-700">{data.hookSubtitle}</span>
-            </p>
-          </div>
-          <Link
-            href="/kontakt"
-            className="inline-flex items-center gap-1.5 whitespace-nowrap text-sm font-semibold text-ink-900 hover:text-brand-700"
-          >
-            Získať cenovú ponuku
-            <ArrowRightIcon size={14} />
-          </Link>
-        </div>
-      </section>
-
       {/* Hero */}
-      <section className="relative overflow-hidden pt-10 md:pt-16">
+      <section className="relative overflow-hidden pt-6 md:pt-10">
         <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-[620px] bg-radial-fade" />
         <div className="container-lg relative">
           <Reveal>
