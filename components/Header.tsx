@@ -27,9 +27,10 @@ export default function Header() {
       <header
         className={`sticky top-0 z-50 transition-all duration-500 ${
           scrolled
-            ? "bg-white/90 backdrop-blur-xl border-b border-ink-900/8 py-3"
-            : "bg-white/70 backdrop-blur-md py-4"
+            ? "border-b border-white/10 py-3"
+            : "py-4"
         }`}
+        style={{ backgroundColor: "#0B1220" }}
       >
         <div className="container-lg flex items-center justify-between">
           <Link href="/" aria-label="MORAK domov" className="flex items-center gap-3">
@@ -38,7 +39,7 @@ export default function Header() {
               alt="MORAK"
               width={1039}
               height={163}
-              className={`transition-all duration-500 ${scrolled ? "h-7" : "h-8"} w-auto`}
+              className={`transition-all duration-500 ${scrolled ? "h-7" : "h-8"} w-auto brightness-0 invert`}
               priority
             />
           </Link>
@@ -48,7 +49,7 @@ export default function Header() {
               <Link
                 key={l.href}
                 href={l.href}
-                className="group relative text-[13px] font-medium tracking-wide text-ink-700 transition-colors hover:text-ink-900 xl:text-sm"
+                className="group relative text-[13px] font-medium tracking-wide text-white/70 transition-colors hover:text-white xl:text-sm"
               >
                 {l.label}
                 <span className="absolute -bottom-1.5 left-0 h-[2px] w-0 bg-brand transition-all duration-300 group-hover:w-full" />
@@ -65,7 +66,7 @@ export default function Header() {
 
           <button
             aria-label="Otvoriť menu"
-            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-ink-900/10 bg-white/80 text-ink-900 backdrop-blur lg:hidden"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-white lg:hidden"
             onClick={() => setOpen(true)}
           >
             <MenuIcon />
