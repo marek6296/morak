@@ -56,17 +56,17 @@ const DETAILS: Record<string, string[]> = {
 
 export default function Services() {
   return (
-    <section id="sluzby" className="section relative">
+    <section id="sluzby" className="section relative bg-ink-900" style={{ paddingTop: "3rem" }}>
       <div className="container-lg">
         <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
           <Reveal>
-            <span className="eyebrow">Čo pre vás robíme</span>
-            <h2 className="mt-4 max-w-2xl text-display-lg h-display text-balance">
+            <span className="eyebrow" style={{ color: "#4ade80" }}>Čo pre vás robíme</span>
+            <h2 className="mt-4 max-w-2xl text-display-lg h-display text-balance text-white">
               Štyri špecializácie, jeden certifikovaný tím.
             </h2>
           </Reveal>
           <Reveal delay={0.1}>
-            <p className="max-w-md text-base leading-relaxed text-ink-500">
+            <p className="max-w-md text-base leading-relaxed text-ink-300">
               Všetko pod jednou strechou — od návrhu po odovzdanie.
             </p>
           </Reveal>

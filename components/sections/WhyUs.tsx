@@ -41,8 +41,8 @@ export default function WhyUs() {
       </div>
 
       <div className="container-lg relative">
-        <div className="grid items-start gap-12 lg:grid-cols-12">
-          <div className="lg:col-span-5">
+        <div className="grid items-stretch gap-12 lg:grid-cols-12">
+          <div className="lg:col-span-5 flex flex-col h-full">
             <Reveal>
               <span className="eyebrow !text-brand-300">Prečo s nami</span>
               <h2 className="mt-4 text-display-lg h-display !text-white text-balance">
@@ -53,12 +53,12 @@ export default function WhyUs() {
               </p>
             </Reveal>
 
-            <Reveal delay={0.1}>
-              <div className="mt-10 overflow-hidden rounded-3xl border border-white/10">
-                <div className="relative aspect-[4/3]">
+            <Reveal delay={0.1} className="flex-1 mt-10">
+              <div className="overflow-hidden rounded-3xl border border-white/10 h-full" style={{ minHeight: "280px" }}>
+                <div className="relative h-full" style={{ minHeight: "280px" }}>
                   <Image
-                    src="https://images.unsplash.com/photo-1642749776312-aa42ce20c9f5?w=1200&q=80&auto=format&fit=crop"
-                    alt="Technik pri inštalácii"
+                    src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80&auto=format&fit=crop"
+                    alt="Inštalácia solárnych panelov na streche rodinného domu"
                     fill
                     sizes="(max-width: 1024px) 100vw, 40vw"
                     className="object-cover"

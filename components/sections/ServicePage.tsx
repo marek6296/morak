@@ -18,79 +18,73 @@ export default function ServicePage({ data }: { data: ServiceData }) {
 
   return (
     <>
-      {/* Hero */}
-      <section className="relative overflow-hidden pt-6 md:pt-10">
-        <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-[620px] bg-radial-fade" />
-        <div className="container-lg relative">
+      {/* Hero — full screen */}
+      <section
+        className="relative overflow-hidden bg-ink-900"
+        style={{ height: "calc(100svh - 64px)" }}
+      >
+        <Image
+          src={data.heroImage}
+          alt={data.title}
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-ink-900/60" />
+        <div aria-hidden className="pointer-events-none absolute inset-0">
+          <div className="absolute -left-40 top-20 h-96 w-96 rounded-full bg-brand/20 blur-[140px]" />
+        </div>
+
+        <div className="container-lg relative flex h-full flex-col justify-center">
           <Reveal>
-            <Link href="/" className="inline-flex items-center gap-2 text-sm font-semibold text-ink-500 hover:text-ink-900">
-              <ArrowUpRightIcon size={14} className="-rotate-[135deg]" />
-              Späť na úvod
-            </Link>
+            <div className="inline-flex items-center gap-2.5 rounded-full border border-white/20 bg-white/10 px-4 py-2 backdrop-blur-sm mb-6">
+              <div className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-brand text-ink-900">
+                <Icon size={18} />
+              </div>
+              <span className="text-sm font-semibold text-white/80">{data.eyebrow}</span>
+            </div>
+            <h1
+              className="h-display text-white text-balance"
+              style={{ fontSize: "clamp(2.8rem, 5vw, 5rem)", lineHeight: 1.05, letterSpacing: "-0.025em" }}
+            >
+              {data.title}
+            </h1>
+            <p className="mt-6 max-w-2xl text-xl leading-relaxed text-ink-300">
+              {data.heroLead}
+            </p>
           </Reveal>
 
-          <div className="mt-8 grid items-start gap-14 lg:grid-cols-12">
-            <div className="lg:col-span-7">
-              <Reveal>
-                <span className="eyebrow">{data.eyebrow}</span>
-                <h1 className="mt-5 text-display-xl h-display text-balance">{data.title}</h1>
-                <p className="mt-6 max-w-xl text-lg leading-relaxed text-ink-500 text-balance">{data.heroLead}</p>
-              </Reveal>
-
-              <Reveal delay={0.1}>
-                <div className="mt-10 flex flex-wrap gap-3">
-                  <Link href="/kontakt" className="btn-primary">
-                    Získať cenovú ponuku
-                    <ArrowRightIcon size={16} />
-                  </Link>
-                  <a href="#co-zahrna" className="btn-ghost">
-                    Čo obsahuje služba
-                  </a>
-                </div>
-              </Reveal>
-
-              <Reveal delay={0.2}>
-                <div className="mt-12 grid gap-4 sm:grid-cols-3">
-                  {data.highlights.map((h) => {
-                    const I = ICON_MAP[h.icon];
-                    return (
-                      <div key={h.label} className="rounded-2xl border border-ink-900/10 bg-white p-5 shadow-soft">
-                        <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-brand/15 text-brand-700">
-                          <I size={20} />
-                        </span>
-                        <p className="mt-4 text-[11px] font-semibold uppercase tracking-[0.14em] text-ink-400">
-                          {h.label}
-                        </p>
-                        <p className="mt-1 font-display text-2xl font-semibold tracking-tight text-ink-900">{h.value}</p>
-                      </div>
-                    );
-                  })}
-                </div>
-              </Reveal>
+          <Reveal delay={0.1}>
+            <div className="mt-8 grid gap-4 sm:grid-cols-3 max-w-2xl">
+              {data.highlights.map((h) => {
+                const I = ICON_MAP[h.icon];
+                return (
+                  <div key={h.label} className="rounded-2xl border border-white/15 bg-white/10 p-5 backdrop-blur-sm">
+                    <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-brand/30 text-brand-300">
+                      <I size={18} />
+                    </span>
+                    <p className="mt-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-white/50">
+                      {h.label}
+                    </p>
+                    <p className="mt-1 font-display text-2xl font-semibold tracking-tight text-white">{h.value}</p>
+                  </div>
+                );
+              })}
             </div>
+          </Reveal>
 
-            <motion.div
-              initial={{ opacity: 0, scale: 0.96 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.9, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-              className="relative lg:col-span-5"
-            >
-              <div className="relative aspect-[4/5] overflow-hidden rounded-[28px] bg-ink-800 shadow-lift">
-                <Image
-                  src={data.heroImage}
-                  alt={data.title}
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 40vw"
-                  className="object-cover"
-                  priority
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-ink-900/40 via-transparent to-transparent" />
-                <div className="absolute left-6 top-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-white/95 text-ink-900 backdrop-blur">
-                  <Icon size={28} />
-                </div>
-              </div>
-            </motion.div>
-          </div>
+          <Reveal delay={0.2}>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link href="/kontakt" className="btn-primary">
+                Získať cenovú ponuku
+                <ArrowRightIcon size={16} />
+              </Link>
+              <a href="#co-zahrna" className="btn-ghost" style={{ color: "white", borderColor: "rgba(255,255,255,0.3)" }}>
+                Čo obsahuje služba
+              </a>
+            </div>
+          </Reveal>
         </div>
       </section>
 

@@ -145,7 +145,7 @@ export default function Hero() {
               className="flex flex-col gap-2.5"
             >
               <h1 className="font-display text-[3.1rem] font-semibold leading-[1.05] tracking-tight text-ink-900">
-                Elektrina, ktorú si vyrábate sami.
+                Energia, ktorú nikto nemôže zdražiť.
               </h1>
               <p className="text-[20px] leading-relaxed text-ink-600">
                 Znížte účet za elektrinu až o&nbsp;80 %. Realizácia na kľúč s päťročnou zárukou.
@@ -199,31 +199,26 @@ export default function Hero() {
       </div>
 
       {/* ── DESKTOP HERO (lg+) ── */}
-      <div className="hidden lg:flex flex-col" style={{ minHeight: "calc(100svh - 64px)" }}>
-        <div className="container-lg relative flex-1 flex flex-col justify-center py-10">
-          <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
+      <div className="hidden lg:flex flex-col overflow-hidden" style={{ height: "calc(100svh - 64px)" }}>
+        <div className="container-lg relative flex-1 grid lg:grid-cols-2 gap-8 py-8" style={{ alignContent: "center", alignItems: "center", paddingBottom: "2rem", paddingTop: "0" }}>
 
             {/* LEFT — text */}
-            <div>
+            <div style={{ marginBottom: "2rem" }}>
               <motion.h1
                 initial={{ opacity: 0, y: 26 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
                 className="h-display text-balance"
-                style={{ fontSize: "clamp(2.8rem, 5.2vw, 4.6rem)", lineHeight: 1.05, letterSpacing: "-0.02em" }}
+                style={{ fontSize: "clamp(3.2rem, 4.5vw + 2vh, 5.8rem)", lineHeight: 1.03, letterSpacing: "-0.025em" }}
               >
-                Elektrina, ktorú si vyrábate sami.{" "}
-                <span className="relative inline-block">
-                  <span className="relative z-10">Dotácia až 7 500 €.</span>
-                  <span className="absolute bottom-2 left-0 right-0 -z-0 h-3 bg-brand/40" />
-                </span>
+                Energia, ktorú nikto nemôže zdražiť.
               </motion.h1>
 
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.9, delay: 0.16, ease: [0.22, 1, 0.36, 1] }}
-                className="mt-5 max-w-lg text-xl leading-relaxed text-ink-500"
+                className="mt-6 max-w-xl leading-relaxed text-ink-500" style={{ fontSize: "clamp(1.2rem, 1.3vw + 0.8vh, 1.6rem)" }}
               >
                 Znížte účet za elektrinu až o 80 %. Realizácia na kľúč s päťročnou zárukou.
               </motion.p>
@@ -232,13 +227,13 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.24 }}
-                className="mt-7 flex flex-wrap items-center gap-3"
+                className="mt-7 flex flex-wrap items-center gap-4"
               >
-                <Link href="/kontakt" className="btn-primary">
+                <Link href="/kontakt" className="btn-primary" style={{ fontSize: "1.1rem", padding: "0.9rem 2rem" }}>
                   Získať cenovú ponuku
-                  <ArrowRightIcon size={16} />
+                  <ArrowRightIcon size={18} />
                 </Link>
-                <Link href="#sluzby" className="btn-ghost">
+                <Link href="#sluzby" className="btn-ghost" style={{ fontSize: "1.1rem", padding: "0.9rem 2rem" }}>
                   Naše služby
                 </Link>
               </motion.div>
@@ -256,7 +251,7 @@ export default function Hero() {
                 scale:   { type: "spring", stiffness: 220, damping: 22 },
                 y:       { type: "spring", stiffness: 220, damping: 22 },
               }}
-              className="relative flex items-center justify-center"
+              className="relative flex items-center justify-center h-full"
             >
               <motion.div
                 initial={{ opacity: 0, scale: 0.85, y: -10 }}
@@ -294,40 +289,13 @@ export default function Hero() {
                 height={1189}
                 priority
                 sizes="(max-width: 1280px) 50vw, 620px"
-                className="w-full h-auto max-h-[600px] object-contain"
+                className="w-full h-full object-contain" style={{ maxHeight: "calc(100svh - 64px - 4rem)" }}
               />
             </motion.div>
-          </div>
 
         </div>
       </div>
 
-      {/* ── BRAND STRIP — below the fold (desktop) ── */}
-      <div className="hidden lg:block" style={{ backgroundColor: "#fafafa" }}>
-        <div className="container-lg border-t border-ink-900/10 py-10">
-          <p className="text-center text-xs font-semibold uppercase tracking-[0.2em] text-ink-400">
-            Certifikácie, partneri a výrobcovia
-          </p>
-          <div className="mt-5 grid grid-cols-6 items-center gap-6">
-            {BRANDS.map((b) => (
-              <div key={b.name} className="flex items-center justify-center h-10">
-                <Image
-                  src={`https://logo.clearbit.com/${b.domain}`}
-                  alt={b.name}
-                  width={120}
-                  height={40}
-                  className="h-7 w-auto object-contain opacity-50 grayscale"
-                  onError={(e) => {
-                    const target = e.target as HTMLImageElement;
-                    target.style.display = "none";
-                    target.parentElement!.innerHTML = `<span style="font-family:var(--font-display);font-size:14px;font-weight:700;letter-spacing:0.16em;color:#9ca3af">${b.name.toUpperCase()}</span>`;
-                  }}
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
 
     </section>
   );
