@@ -36,31 +36,25 @@ export default function ServicePage({ data }: { data: ServiceData }) {
           <div className="absolute -left-40 top-20 h-96 w-96 rounded-full bg-brand/20 blur-[140px]" />
         </div>
 
-        <div className="container-lg relative flex h-full flex-col justify-center">
+        <div className="container-lg relative flex h-full flex-col items-center justify-center text-center">
           <Reveal>
-            <div className="inline-flex items-center gap-2.5 rounded-full border border-white/20 bg-white/10 px-4 py-2 backdrop-blur-sm mb-6">
-              <div className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-brand text-ink-900">
-                <Icon size={18} />
-              </div>
-              <span className="text-sm font-semibold text-white/80">{data.eyebrow}</span>
-            </div>
             <h1
-              className="h-display text-white text-balance"
-              style={{ fontSize: "clamp(2.8rem, 5vw, 5rem)", lineHeight: 1.05, letterSpacing: "-0.025em" }}
+              className="h-display text-white text-balance mx-auto"
+              style={{ fontSize: "clamp(2.8rem, 5vw, 5rem)", lineHeight: 1.05, letterSpacing: "-0.025em", maxWidth: "820px" }}
             >
               {data.title}
             </h1>
-            <p className="mt-6 max-w-2xl text-xl leading-relaxed text-ink-300">
+            <p className="mt-6 mx-auto text-xl leading-relaxed text-ink-300" style={{ maxWidth: "600px" }}>
               {data.heroLead}
             </p>
           </Reveal>
 
           <Reveal delay={0.1}>
-            <div className="mt-8 grid gap-4 sm:grid-cols-3 max-w-2xl">
+            <div className="mt-10 grid gap-4 sm:grid-cols-3 max-w-2xl mx-auto">
               {data.highlights.map((h) => {
                 const I = ICON_MAP[h.icon];
                 return (
-                  <div key={h.label} className="rounded-2xl border border-white/15 bg-white/10 p-5 backdrop-blur-sm">
+                  <div key={h.label} className="rounded-2xl border border-white/15 bg-white/10 p-5 backdrop-blur-sm text-center">
                     <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-brand/30 text-brand-300">
                       <I size={18} />
                     </span>
@@ -75,7 +69,7 @@ export default function ServicePage({ data }: { data: ServiceData }) {
           </Reveal>
 
           <Reveal delay={0.2}>
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="mt-8 flex flex-wrap justify-center gap-3">
               <Link href="/kontakt" className="btn-primary">
                 Získať cenovú ponuku
                 <ArrowRightIcon size={16} />
