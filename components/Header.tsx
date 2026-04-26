@@ -58,7 +58,10 @@ export default function Header() {
           </nav>
 
           <div className="hidden items-center gap-3 lg:flex">
-            <Link href="/kontakt" className="btn-nav">
+            <Link
+              href="/kontakt"
+              className="inline-flex items-center gap-2 rounded-xl bg-brand px-[22px] py-3 text-[13px] font-bold tracking-[0.01em] text-white transition-all duration-200 hover:scale-[1.05] hover:shadow-[0_4px_20px_rgba(127,204,31,0.5)] active:scale-[0.97]"
+            >
               Cenová ponuka
               <ArrowRightIcon size={16} />
             </Link>
