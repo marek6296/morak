@@ -3,13 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowRightIcon, CheckIcon, ShieldIcon } from "@/components/icons";
-
-const PERKS = [
-  "Bezplatná konzultácia a cenový návrh",
-  "Realizácia na kľúč certifikovaným tímom",
-  "Päťročná záruka na vykonané práce"
-];
+import { ArrowRightIcon, ShieldIcon } from "@/components/icons";
 
 const BRANDS = [
   { name: "Fronius", domain: "fronius.com" },
@@ -150,10 +144,10 @@ export default function Hero() {
               transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
               className="flex flex-col gap-2.5"
             >
-              <h1 className="font-display text-[2.6rem] font-semibold leading-[1.1] tracking-tight text-ink-900">
+              <h1 className="font-display text-[3.1rem] font-semibold leading-[1.05] tracking-tight text-ink-900">
                 Elektrina, ktorú si vyrábate sami.
               </h1>
-              <p className="text-[17px] leading-relaxed text-ink-600">
+              <p className="text-[20px] leading-relaxed text-ink-600">
                 Znížte účet za elektrinu až o&nbsp;80 %. Realizácia na kľúč s päťročnou zárukou.
               </p>
               <Link
@@ -176,19 +170,9 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Below-fold: perks + brand strip */}
+        {/* Below-fold: brand strip */}
         <div className="px-5 py-8" style={{ backgroundColor: "#fafafa" }}>
-          <ul className="grid gap-3">
-            {PERKS.map((p) => (
-              <li key={p} className="flex items-center gap-3 text-[14px] text-ink-700">
-                <span className="inline-flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-ink-100 text-ink-500">
-                  <CheckIcon size={12} />
-                </span>
-                {p}
-              </li>
-            ))}
-          </ul>
-          <div className="mt-6 border-t border-ink-900/10 pt-5">
+          <div className="border-t border-ink-900/10 pt-5">
             <p className="text-center text-[10px] font-semibold uppercase tracking-[0.2em] text-ink-400">
               Certifikácie, partneri a výrobcovia
             </p>
@@ -226,7 +210,7 @@ export default function Hero() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
                 className="h-display text-balance"
-                style={{ fontSize: "clamp(2.2rem, 4.2vw, 3.6rem)", lineHeight: 1.1, letterSpacing: "-0.02em" }}
+                style={{ fontSize: "clamp(2.8rem, 5.2vw, 4.6rem)", lineHeight: 1.05, letterSpacing: "-0.02em" }}
               >
                 Elektrina, ktorú si vyrábate sami.{" "}
                 <span className="relative inline-block">
@@ -239,7 +223,7 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.9, delay: 0.16, ease: [0.22, 1, 0.36, 1] }}
-                className="mt-5 max-w-lg text-lg leading-relaxed text-ink-500"
+                className="mt-5 max-w-lg text-xl leading-relaxed text-ink-500"
               >
                 Znížte účet za elektrinu až o 80 %. Realizácia na kľúč s päťročnou zárukou.
               </motion.p>
@@ -259,21 +243,6 @@ export default function Hero() {
                 </Link>
               </motion.div>
 
-              <motion.ul
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.8, delay: 0.35 }}
-                className="mt-7 grid gap-2.5 sm:grid-cols-3"
-              >
-                {PERKS.map((p) => (
-                  <li key={p} className="flex items-start gap-2.5 text-sm text-ink-600">
-                    <span className="mt-0.5 inline-flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-ink-100 text-ink-500">
-                      <CheckIcon size={14} />
-                    </span>
-                    <span className="leading-snug">{p}</span>
-                  </li>
-                ))}
-              </motion.ul>
             </div>
 
             {/* RIGHT — illustration */}
