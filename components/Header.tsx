@@ -39,7 +39,7 @@ export default function Header() {
               alt="MORAK"
               width={1039}
               height={163}
-              className={`transition-all duration-500 ${scrolled ? "h-7" : "h-8"} w-auto brightness-0 invert`}
+              className={`transition-all duration-500 ${scrolled ? "h-7" : "h-8"} w-auto`}
               priority
             />
           </Link>
