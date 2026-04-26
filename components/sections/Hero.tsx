@@ -199,8 +199,8 @@ export default function Hero() {
       </div>
 
       {/* ── DESKTOP HERO (lg+) ── */}
-      <div className="hidden lg:flex flex-col" style={{ minHeight: "calc(100svh - 64px)" }}>
-        <div className="container-lg relative flex-1 flex flex-col justify-center py-6">
+      <div className="hidden lg:flex flex-col">
+        <div className="container-lg relative flex flex-col justify-center pt-12 pb-8">
           <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
 
             {/* LEFT — text */}
