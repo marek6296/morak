@@ -5,15 +5,6 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRightIcon, ShieldIcon } from "@/components/icons";
 
-const BRANDS = [
-  { name: "Fronius", domain: "fronius.com" },
-  { name: "GoodWe", domain: "goodwe.com" },
-  { name: "Huawei", domain: "huawei.com" },
-  { name: "Daikin", domain: "daikin.com" },
-  { name: "Hikvision", domain: "hikvision.com" },
-  { name: "SMA", domain: "sma.de" },
-];
-
 function SealBadge({ size = 84, uid = "a" }: { size?: number; uid?: string }) {
   const gId = `sg-${uid}`;
   // 28 jemných zubov — plynulejší okraj pečate
@@ -92,8 +83,8 @@ export default function Hero() {
     <section className="relative" style={{ backgroundColor: "#fafafa" }}>
 
       {/* ── MOBILE HERO (< lg) ── */}
-      <div className="lg:hidden">
-        <div className="relative bg-white" style={{ height: "calc(100svh - 64px)", minHeight: "540px" }}>
+      <div className="lg:hidden" style={{ height: "calc(100svh - 64px)", overflow: "hidden", position: "relative" }}>
+        <div className="relative bg-white h-full">
 
           <Image
             src="/images/hero-phone.png"
@@ -114,14 +105,14 @@ export default function Hero() {
             className="absolute left-4 top-4"
           >
             <div
-              className="rounded-2xl px-4 py-3 shadow-[0_8px_32px_rgba(34,197,94,0.35)]"
+              className="rounded-2xl px-3 py-2.5 shadow-[0_8px_32px_rgba(34,197,94,0.35)]"
               style={{ background: "linear-gradient(135deg, #22c55e 0%, #16a34a 100%)" }}
             >
-              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-green-100">Štátna dotácia</p>
-              <p className="font-display leading-none text-white" style={{ fontSize: "2rem", fontWeight: 900 }}>
+              <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-green-100">Štátna dotácia</p>
+              <p className="font-display leading-none text-white" style={{ fontSize: "1.7rem", fontWeight: 900 }}>
                 7 500 €
               </p>
-              <p className="mt-0.5 text-[11px] font-semibold text-green-100">Zelená domácnostiam III</p>
+              <p className="mt-0.5 text-[10px] font-semibold text-green-100">Zelená domácnostiam III</p>
             </div>
           </motion.div>
 
@@ -133,67 +124,42 @@ export default function Hero() {
             className="absolute right-4 top-4"
             style={{ filter: "drop-shadow(0 6px 18px rgba(212,175,55,0.55))" }}
           >
-            <SealBadge size={84} uid="mob" />
+            <SealBadge size={76} uid="mob" />
           </motion.div>
 
           {/* Text + CTA */}
-          <div className="absolute inset-x-0 bottom-0 px-5 pb-6">
+          <div className="absolute inset-x-0 bottom-0 px-5 pb-8">
             <motion.div
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
-              className="flex flex-col gap-2.5"
+              className="flex flex-col gap-2"
             >
-              <h1 className="font-display text-[3.1rem] font-semibold leading-[1.05] tracking-tight text-ink-900">
+              <h1 className="font-display font-semibold leading-[1.05] tracking-tight text-ink-900"
+                style={{ fontSize: "clamp(2rem, 8vw, 2.8rem)" }}>
                 Energia, ktorú nikto nemôže zdražiť.
               </h1>
-              <p className="text-[20px] leading-relaxed text-ink-600">
+              <p className="text-[16px] leading-snug text-ink-600">
                 Znížte účet za elektrinu až o&nbsp;80 %. Realizácia na kľúč s päťročnou zárukou.
               </p>
               <Link
                 href="/kontakt"
-                className="btn-primary mt-1 w-full justify-center py-3.5 text-[15px]"
+                className="btn-primary mt-1 w-full justify-center"
+                style={{ padding: "14px 20px", fontSize: "14px" }}
               >
                 Získať bezplatnú cenovú ponuku
                 <ArrowRightIcon size={16} />
               </Link>
-              <div className="flex items-center gap-2.5 rounded-xl border border-ink-900/10 bg-white/80 px-3.5 py-2.5 backdrop-blur-sm">
-                <span className="inline-flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-ink-100 text-ink-500">
-                  <ShieldIcon size={13} />
+              <div className="flex items-center gap-2.5 rounded-xl border border-ink-900/10 bg-white/80 px-3 py-2 backdrop-blur-sm">
+                <span className="inline-flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-ink-100 text-ink-500">
+                  <ShieldIcon size={12} />
                 </span>
-                <p className="text-[12px] leading-snug text-ink-700">
+                <p className="text-[11px] leading-snug text-ink-700">
                   <span className="font-semibold text-ink-900">5-ročná záruka</span>
                   <span> · oprávnenie §22/§23 · bezplatná konzultácia</span>
                 </p>
               </div>
             </motion.div>
-          </div>
-        </div>
-
-        {/* Below-fold: brand strip */}
-        <div className="px-5 py-8" style={{ backgroundColor: "#fafafa" }}>
-          <div className="border-t border-ink-900/10 pt-5">
-            <p className="text-center text-[10px] font-semibold uppercase tracking-[0.2em] text-ink-400">
-              Certifikácie, partneri a výrobcovia
-            </p>
-            <div className="mt-4 grid grid-cols-3 gap-4 items-center">
-              {BRANDS.map((b) => (
-                <div key={b.name} className="flex items-center justify-center h-8">
-                  <Image
-                    src={`https://logo.clearbit.com/${b.domain}`}
-                    alt={b.name}
-                    width={80}
-                    height={32}
-                    className="h-6 w-auto object-contain opacity-60 grayscale"
-                    onError={(e) => {
-                      const target = e.target as HTMLImageElement;
-                      target.style.display = "none";
-                      target.parentElement!.innerHTML = `<span class="font-display text-xs font-semibold tracking-[0.12em] text-ink-400">${b.name.toUpperCase()}</span>`;
-                    }}
-                  />
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </div>
